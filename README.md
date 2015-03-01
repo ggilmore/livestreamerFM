@@ -24,6 +24,8 @@ LIVESTREAMER_CONFIG_FILE_LOCATION: This utility generates a config file that the
 
 ##TODO:
 -add config file support so that you don't have to type in all these commands every time 
+
 -add basic parsing of url so that there is an url -> audio_option matching 
+
 -write basic webui
 

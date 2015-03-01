@@ -52,7 +52,7 @@ object ArgParser extends App {
    * @param audioOptionName the specific audio option for the stream that is
    *                        passed to Livestreamer (e.g. "audio" for a twitch url or "audio_mp4" for youtube urls)
    */
-  private def createLiveStreamerProcess(livestreamerPath: String = LIVESTREAMER_LOCATION_OSX,
+  private def createLiveStreamerProcess(livestreamerPath: String = "livestreamer",
                                         configLocation: String, url: String, audioOptionName: String) {
 
 
@@ -67,7 +67,7 @@ object ArgParser extends App {
 
     }
     catch {
-      case t: IOException => println("Livestreamer installation not found. Are you sure it's installed at: " + livestreamerPath + " ?")
+      case t: IOException => println("Livestreamer installation not found. Are you sure it's installed and in the system path?")
     }
 
   }

@@ -4,7 +4,7 @@ Right now, this is a just small commandline utility that uses Livestreamer (http
 
 At the moment, livestreamer must be located at "/usr/local/bin/livestreamer" and VLC must be located at "/Applications/VLC.app/Contents/MacOS/VLC" (both of which are the default installation locations). 
 
-Usage:
+##Usage:
 
 Run it from the command line with these options: 
 

@@ -18,7 +18,7 @@ AUDIO_OPTION: The specific audio option to pass to livestreamer. At the moment t
 
 IP_ADDRESS: The ip address that you want the http server to bind to. 
 
-PORT: The port that you want VLC to use. 
+PORT: The port that you want the http server to bind to. 
 
 LIVESTREAMER_CONFIG_FILE_LOCATION: This utility generates a config file that the Livestreamer app uses. This part of the command tells livestreamerFM where to store the generated file. 
 

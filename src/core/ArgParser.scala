@@ -1,4 +1,6 @@
 package core
+
+import java.io.IOException
 import java.net.{MalformedURLException, URL}
 
 import scala.io.StdIn
@@ -23,21 +25,21 @@ object ArgParser extends App {
     val option = new LSConfigOptions(fileLocation = configLocation, ip = ipAddress, vlcPort = port)
     if (!option.validate) println(IP_OR_PORT_ERROR)
     else {
-      println("\n\n****** "+url+" AUDIO STREAM LOCATED @ http://" + ipAddress + ":" + port + " ******\n\n")
+      println("\n\n****** " + url + " AUDIO STREAM LOCATED @ http://" + ipAddress + ":" + port + " ******\n\n")
       LivestreamerConfigFileWriter.writeNewConfigFile(option)
       createLiveStreamerProcess(configLocation = option.fileLocation + option.name, url = url, audioOptionName = audioOption)
     }
 
   }
 
-  private val urlToAudioOptionMap:Map[String, String] = Map("twitch.tv/" -> "audio", "youtube.com/" -> "audio_mp4").withDefaultValue("")
+  private val urlToAudioOptionMap: Map[String, String] = Map("twitch.tv/" -> "audio", "youtube.com/" -> "audio_mp4").withDefaultValue("")
 
-  private def getAudioOption(url:String):String = {
+  private def getAudioOption(url: String): String = {
     try {
-        val parsedUrl = new URL(url)
-        println(parsedUrl.getHost)
-        urlToAudioOptionMap(parsedUrl.getHost)
-    }catch {
+      val parsedUrl = new URL(url)
+      println(parsedUrl.getHost)
+      urlToAudioOptionMap(parsedUrl.getHost)
+    } catch {
       case t: MalformedURLException => ""
     }
   }
@@ -52,15 +54,21 @@ object ArgParser extends App {
    */
   private def createLiveStreamerProcess(livestreamerPath: String = LIVESTREAMER_LOCATION_OSX,
                                         configLocation: String, url: String, audioOptionName: String) {
-    val lsprocess = Process(livestreamerPath + " --config " + configLocation + " " + url + " " + audioOptionName)
-    val runningProcess = lsprocess.run()
 
-    //makes sure to send SIGINT to the livestreamer process so that VLC shuts down cleanly
-    sys addShutdownHook ({
-      println("Hook caught!")
-      runningProcess.destroy()
-    })
+
+    try {
+      val lsprocess = Process(livestreamerPath + " --config " + configLocation + " " + url + " " + audioOptionName)
+      val runningProcess = lsprocess.run()
+      //makes sure to send SIGINT to the livestreamer process so that VLC shuts down cleanly
+      sys addShutdownHook ({
+        println("Hook caught!")
+        runningProcess.destroy()
+      })
+
+    }
+    catch {
+      case t: IOException => println("Livestreamer installation not found. Are you sure it's installed at: " + livestreamerPath + " ?")
+    }
 
   }
-
 }

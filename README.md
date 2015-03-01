@@ -22,3 +22,8 @@ PORT: The port that you want the http server to bind to.
 
 LIVESTREAMER_CONFIG_FILE_LOCATION: This utility generates a config file that the Livestreamer app uses. This part of the command tells livestreamerFM where to store the generated file. 
 
+##TODO:
+-add config file support so that you don't have to type in all these commands every time 
+-add basic parsing of url so that there is an url -> audio_option matching 
+-write basic webui
+

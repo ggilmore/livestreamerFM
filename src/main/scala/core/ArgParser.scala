@@ -46,6 +46,7 @@ object ArgParser extends App {
     }
   }
 
+
   /**
    * Starts the Livestreamer process with the specified options passed to it
    * @param livestreamerPath path to the location of the Livestreamer binary
@@ -63,8 +64,7 @@ object ArgParser extends App {
       val runningProcess = lsprocess.run()
       //makes sure to send SIGINT to the livestreamer process so that VLC shuts down cleanly
       sys addShutdownHook ({
-        println("Hook caught!")
-        runningProcess.destroy()
+        runningProcess.destroy
       })
 
     }

@@ -642,9 +642,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.5!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar
-[debug] :: resolution report :: resolve 2710ms :: artifacts dl 79ms
+[debug] :: resolution report :: resolve 1077ms :: artifacts dl 29ms
 [debug] 	report for livestreamerfmtrue#livestreamerfmtrue$sbt_2.11;1.0 default produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFMTrue/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sbt_2.11-default.xml
-[debug] 	resolve done (2710ms resolve - 79ms download)
+[debug] 	resolve done (1077ms resolve - 29ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: livestreamerfmtrue#livestreamerfmtrue$sources_2.11;1.0
 [debug] 	confs: [default]
@@ -1007,6 +1007,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.5!precompiled-2_9_3.jar(src)
 [debug] 	[NOT REQUIRED] com.github.mpeltonen#sbt-idea;1.6.0!sbt-idea.jar(src)
 [debug] 	[NOT REQUIRED] commons-io#commons-io;2.0.1!commons-io.jar(src)
-[debug] :: resolution report :: resolve 495ms :: artifacts dl 155ms
+[debug] :: resolution report :: resolve 191ms :: artifacts dl 31ms
 [debug] 	report for livestreamerfmtrue#livestreamerfmtrue$sources_2.11;1.0 default produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFMTrue/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_2.11-default.xml
-[debug] 	resolve done (495ms resolve - 155ms download)
+[debug] 	resolve done (191ms resolve - 31ms download)

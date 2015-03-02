@@ -12,7 +12,7 @@ object AudioSettings extends Enumeration {
   type SupportedWebsite = Value
   val TWITCH, YOUTUBE, UNSUPPORTED = Value
   private val websiteAudioMapping: Map[AudioSettings.Value, String] = Map(TWITCH -> "audio", YOUTUBE -> "audio_mp4",
-    UNSUPPORTED -> "hot_garbage")
+    UNSUPPORTED -> "best")
 
   /**
    * helper function used to get the audio quality setting for livestreamer associated with a particular url 

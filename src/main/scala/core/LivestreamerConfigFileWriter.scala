@@ -7,7 +7,7 @@ object LivestreamerConfigFileWriter {
 
   /**
    * Creates a new configuration file for Livestreamer
-   * @Param options = the options to write into the config file
+   * @param options = the options to write into the config file
    *
    * @return a text file that contains all the configuration options 
    *         necessary to configure livestreamer
@@ -16,7 +16,7 @@ object LivestreamerConfigFileWriter {
     println(options.fileLocation + options.name)
     val writer = new PrintWriter(new File(options.fileLocation + options.name))
     val playerOptions = ("player=" + options.vlcLocation + " -I dummy —---network-caching <" + options.delay +
-      "> —-playandexit --sout '#standard{access=http,mux=asf,vcodec=h264,acodec=mp4a,dst="
+      "> —-playandexit --no-sout-video --sout-audio --sout '#standard{access=http,mux=asf,vcodec=h264,acodec=mp4a,dst="
       + options.ip + ":" + options.vlcPort + "}'")
     writer.write(DO_NOT_EDIT + "\n")
     writer.write(playerOptions)

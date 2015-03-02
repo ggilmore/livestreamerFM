@@ -8,13 +8,11 @@ At the moment, VLC must be located at "/Applications/VLC.app/Contents/MacOS/VLC"
 
 Run it from the command line with these options: 
 
-[STREAM_URL] [AUDIO_OPTION] [IP_ADDRESS] [PORT] [LIVESTREAMER_CONFIG_FILE_LOCATION]
+[STREAM_URL] [IP_ADDRESS] [PORT] [LIVESTREAMER_CONFIG_FILE_LOCATION]
 
 Example: twitch.tv/arteezy audio localhost 9999 ~/configs
 
 STREAM_URL: The URL of the stream that you want to play. At the moment, only twitch and youtube are supported. 
-
-AUDIO_OPTION: The specific audio option to pass to livestreamer. At the moment this is dictated by whatever the corresponding livestreamer plugin says the name of the audio option is. For twitch it is "audio" and for youtube it's "audio_mp4".
 
 IP_ADDRESS: The ip address that you want the http server to bind to. 
 
@@ -25,7 +23,7 @@ LIVESTREAMER_CONFIG_FILE_LOCATION: This utility generates a config file that the
 ##TODO:
 -add config file support so that you don't have to type in all these commands every time 
 
--add basic parsing of url so that there is an url -> audio_option matching 
+-~~add basic parsing of url so that there is an url -> audio_option matching~~ Done.
 
 -write basic webui
 

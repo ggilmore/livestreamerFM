@@ -3,38 +3,37 @@ package core
 import java.io.IOException
 import java.net.{MalformedURLException, URL}
 
-import scala.io.StdIn
 import scala.sys.process._
 
 object ArgParser extends App {
   /*
-   * Desired Arguments: [STREAM_URL] [AUDIO_OPTION] [IP_ADDRESS] [PORT] [LIVESTREAMER CONFIG FILE LOCATION]
+   * Desired Arguments: [STREAM_URL] [IP_ADDRESS] [PORT] [LIVESTREAMER CONFIG FILE LOCATION]
    */
 
-  private val DEFAULT_USAGE = "USAGE: [STREAM_URL] [AUDIO_OPTION] [IP_ADDRESS] [PORT] [LIVESTREAMER_CONFIG_FILE_LOCATION]"
+  val osName = System.getProperty("os.name")
+  private val DEFAULT_USAGE = "USAGE: [STREAM_URL] [IP_ADDRESS] [PORT] [LIVESTREAMER_CONFIG_FILE_LOCATION]"
   private val IP_OR_PORT_ERROR = "That doesn't look like a real IP-Address and/or port. Check it."
   private val LIVESTREAMER_LOCATION_OSX = "/usr/local/bin/livestreamer"
-  val osName = System.getProperty("os.name")
 
-  if (args.size != 5) println(DEFAULT_USAGE)
+  if (args.size != 4) println(DEFAULT_USAGE)
   else {
     val url = args(0)
-    val audioOption = args(1)
-    val ipAddress = args(2)
-    val port = args(3)
-    val configLocation = args(4)
+    val ipAddress = args(1)
+    val port = args(2)
+    val configLocation = args(3)
     println(osName)
     val option = new LSConfigOptions(fileLocation = configLocation, ip = ipAddress, vlcPort = port)
     if (!option.validate) println(IP_OR_PORT_ERROR)
     else {
       println("\n\n****** " + url + " AUDIO STREAM LOCATED @ http://" + ipAddress + ":" + port + " ******\n\n")
       LivestreamerConfigFileWriter.writeNewConfigFile(option)
-      createLiveStreamerProcess(configLocation = option.fileLocation + option.name, url = url, audioOptionName = audioOption)
+      createLiveStreamerProcess(configLocation = option.fileLocation + option.name, url = url, audioOptionName = 
+        AudioSettings.getAudioSettingFromURL(url))
     }
 
   }
-
-  private val urlToAudioOptionMap: Map[String, String] = Map("twitch.tv/" -> "audio", "youtube.com/" -> "audio_mp4").withDefaultValue("")
+  private val urlToAudioOptionMap: Map[String, String] = Map("twitch.tv/" -> "audio", "youtube.com/" -> "audio_mp4")
+    .withDefaultValue("")
 
   private def getAudioOption(url: String): String = {
     try {
@@ -69,7 +68,8 @@ object ArgParser extends App {
 
     }
     catch {
-      case t: IOException => println("Livestreamer installation not found. Are you sure it's installed and in the system path?")
+      case t: IOException => println("Livestreamer installation not found. Are you sure it's installed and in the " +
+        "system path?")
     }
 
   }

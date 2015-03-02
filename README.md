@@ -2,7 +2,7 @@
 
 Right now, this is just an extremely small commandline utility that uses Livestreamer (http://livestreamer.tanuki.se/) and VLC to create an audio http server that streams audio from twitch.tv and youtube.com streams. It is written in scala (and thus it requires java to be installed), and currently supports only OSX. Multiplatform support is incomming shortly.
 
-At the moment, livestreamer must be VLC must be located at "/Applications/VLC.app/Contents/MacOS/VLC" (both of which are the default installation locations). 
+At the moment, VLC must be located at "/Applications/VLC.app/Contents/MacOS/VLC" (which is the default installation locations).
 
 ##Usage:
 

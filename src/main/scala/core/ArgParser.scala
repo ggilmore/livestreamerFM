@@ -32,19 +32,6 @@ object ArgParser extends App {
     }
 
   }
-  private val urlToAudioOptionMap: Map[String, String] = Map("twitch.tv/" -> "audio", "youtube.com/" -> "audio_mp4")
-    .withDefaultValue("")
-
-  private def getAudioOption(url: String): String = {
-    try {
-      val parsedUrl = new URL(url)
-      println(parsedUrl.getHost)
-      urlToAudioOptionMap(parsedUrl.getHost)
-    } catch {
-      case t: MalformedURLException => ""
-    }
-  }
-
 
   /**
    * Starts the Livestreamer process with the specified options passed to it

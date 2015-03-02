@@ -23,7 +23,7 @@ LIVESTREAMER_CONFIG_FILE_LOCATION: This utility generates a config file that the
 ##TODO:
 -add config file support so that you don't have to type in all these commands every time 
 
--~~add support for sites other than twitch.tv and youtube ~~ Done-ish. I figured out how to get vlc to only stream the audio from a video, but I haven't tested this with every single 
+-~~add support for sites other than twitch.tv and youtube~~ Done-ish. I figured out how to get vlc to only stream the audio from a video, but I haven't tested this with every single
 site on the supported site list for livestreamer.
 
 -~~add basic parsing of url so that there is an url -> audio_option matching~~ Done.

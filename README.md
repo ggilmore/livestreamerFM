@@ -10,7 +10,7 @@ Run it from the command line with these options:
 
 [STREAM_URL] [IP_ADDRESS] [PORT] [LIVESTREAMER_CONFIG_FILE_LOCATION]
 
-Example: twitch.tv/arteezy audio localhost 9999 ~/configs
+Example: twitch.tv/arteezy localhost 9999 ~/configs
 
 STREAM_URL: The URL of the stream that you want to play. At the moment, only twitch and youtube are supported. 
 

@@ -7,8 +7,32 @@
 		revision="1.0"
 		conf="default"
 		confs="default"
-		date="20150302005121"/>
+		date="20150302162622"/>
 	<dependencies>
+		<module organisation="com.eed3si9n" name="sbt-assembly">
+			<revision name="0.13.0" status="release" pubdate="20150226005147" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="46">
+				<license name="MIT License" url="https://github.com/sbt/sbt-assembly/blob/master/LICENSE"/>
+				<metadata-artifact status="no" details="" size="1929" time="0" location="/Users/gmgilmore/.ivy2/cache/scala_2.10/sbt_0.13/com.eed3si9n/sbt-assembly/ivy-0.13.0.xml" searched="false" origin-is-local="false" origin-location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.13.0/ivys/ivy.xml"/>
+				<caller organisation="livestreamerfmtrue" name="livestreamerfmtrue$sources_2.11" conf="default" rev="0.13.0" rev-constraint-default="0.13.0" rev-constraint-dynamic="0.13.0" callerrev="1.0" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
+				<artifacts>
+					<artifact name="sbt-assembly" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="10294" time="0" location="/Users/gmgilmore/.ivy2/cache/scala_2.10/sbt_0.13/com.eed3si9n/sbt-assembly/srcs/sbt-assembly-0.13.0-sources.jar">
+						<origin-location is-local="false" location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.13.0/srcs/sbt-assembly-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scalactic" name="scalactic_2.10">
+			<revision name="2.2.1" status="release" pubdate="20140801060932" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="47">
+				<license name="the Apache License, ASL Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2940" time="0" location="/Users/gmgilmore/.ivy2/cache/org.scalactic/scalactic_2.10/ivy-2.2.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/2.2.1/scalactic_2.10-2.2.1.pom"/>
+				<caller organisation="livestreamerfmtrue" name="livestreamerfmtrue$sources_2.11" conf="default" rev="2.2.1" rev-constraint-default="2.2.1" rev-constraint-dynamic="2.2.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="scalactic_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="242" time="0" location="/Users/gmgilmore/.ivy2/cache/org.scalactic/scalactic_2.10/srcs/scalactic_2.10-2.2.1-sources.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/2.2.1/scalactic_2.10-2.2.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="com.github.mpeltonen" name="sbt-idea">
 			<revision name="1.6.0" status="release" pubdate="20140208141446" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://your.project.url" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="44">
 				<license name="BSD-style" url="http://www.opensource.org/licenses/BSD-3-Clause"/>

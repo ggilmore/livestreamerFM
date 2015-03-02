@@ -4,7 +4,7 @@
 		module="livestreamerfmtrue$sources_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150302005121"
+		publication="20150302162622"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>
@@ -149,6 +149,12 @@
 		</dependency>
 		<dependency org="commons-io" name="commons-io" rev="2.0.1" transitive="false" conf="default->default(compile)">
 			<artifact name="commons-io" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="com.eed3si9n" name="sbt-assembly" rev="0.13.0" transitive="false" conf="default->default(compile)" scalaVersion="2.10" sbtVersion="0.13">
+			<artifact name="sbt-assembly" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.scalactic" name="scalactic_2.10" rev="2.2.1" transitive="false" conf="default->default(compile)">
+			<artifact name="scalactic_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 	</dependencies>
 </ivy-module>

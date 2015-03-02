@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="072632c9-20e8-4399-9edf-0590bc53b453" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/core/AudioSettings.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/core/AudioSettings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/inputs" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/inputs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/output" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-compile.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-docs.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-optional.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-plugin.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-pom.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-provided.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-runtime.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/compile/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/compile/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue_2.11/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue_2.11/1.0/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="livestreamerFMTrue.iws" />
@@ -74,8 +53,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6422652" vertical-offset="0" max-vertical-offset="1260">
-              <caret line="31" column="109" selection-start-line="31" selection-start-column="109" selection-end-line="31" selection-end-column="109" />
+            <state vertical-scroll-proportion="0.41436464" vertical-offset="375" max-vertical-offset="1275">
+              <caret line="45" column="66" selection-start-line="45" selection-start-column="66" selection-end-line="45" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -853,7 +832,7 @@
       <workItem from="1425275468759" duration="6938000" />
       <workItem from="1425320336189" duration="5109000" />
       <workItem from="1425327122505" duration="2387000" />
-      <workItem from="1425331566642" duration="1491000" />
+      <workItem from="1425331566642" duration="1573000" />
     </task>
     <task id="LOCAL-00001" summary="fix readme">
       <created>1425265104624</created>
@@ -921,11 +900,17 @@
       <option name="project" value="LOCAL" />
       <updated>1425332995588</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added new compiled jar">
+      <created>1425333157627</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1425333157627</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29441000" />
+    <option name="totallyTimeSpent" value="29523000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="851" extended-state="0" />
@@ -1017,7 +1002,8 @@
     <MESSAGE value="got ride of two useless functions in ArgParser&#10;" />
     <MESSAGE value="updated README.MD, added support for LivestreamerFM config files and attempted guessing of VLC paths for OSX, Windows, and Linux" />
     <MESSAGE value="fixed README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed README.md" />
+    <MESSAGE value="added new compiled jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new compiled jar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1420,8 +1406,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6422652" vertical-offset="0" max-vertical-offset="1260">
-          <caret line="31" column="109" selection-start-line="31" selection-start-column="109" selection-end-line="31" selection-end-column="109" />
+        <state vertical-scroll-proportion="0.41436464" vertical-offset="375" max-vertical-offset="1275">
+          <caret line="45" column="66" selection-start-line="45" selection-start-column="66" selection-end-line="45" selection-end-column="66" />
           <folding />
         </state>
       </provider>

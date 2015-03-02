@@ -43,9 +43,10 @@ Ex:
 The options that you can choose from are player, delay, ipAndPort, and livestreamerConfigLocation. All these options are 
 optional - you can include any of them or none of them. 
 
-The file should be a plain text file with each new line with the following format:
+The file should be a plain text file with each new line having the following format:
     [option] = [value]
-If you don't follow this format, livestreamer FM will throw and exception. 
+    
+If you don't follow this format, livestreamer FM will throw an exception. 
 
 ###Option descriptions:
 

@@ -17,6 +17,7 @@ Example:
 
     twitch.tv/arteezy localhost 9999 ~/configs 
 Or: 
+
     --config ~/Desktop/LSFMconfig.txt twitch.tv/arteezy
 
 STREAM_URL: The URL of the stream that you want to play.

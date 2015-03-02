@@ -15,7 +15,7 @@ object LivestreamerConfigFileWriter {
   def writeNewConfigFile(options: LSConfigOptions) = {
     println(options.fileLocation + options.name)
     val writer = new PrintWriter(new File(options.fileLocation + options.name))
-    val playerOptions = ("player=" + options.vlcLocation + " -I dummy —---network-caching <" + options.delay +
+    val playerOptions = ("player=" + options.vlcLocation + " -I http —---network-caching <" + options.delay +
       "> —-playandexit --no-sout-video --sout-audio --sout '#standard{access=http,mux=asf,vcodec=h264,acodec=mp4a,dst="
       + options.ip + ":" + options.vlcPort + "}'")
     writer.write(DO_NOT_EDIT + "\n")

@@ -1,6 +1,8 @@
 # livestreamerFM
 
-Right now, this is just an extremely small commandline utility that uses Livestreamer (http://livestreamer.tanuki.se/) and VLC to create an audio http server that streams audio from your favorite livestreamer streams. It is written in scala (and thus it requires java to be installed), and currently supports only OSX. Multiplatform support is incomming shortly.
+Right now, this is just an extremely small commandline utility that uses Livestreamer (http://livestreamer.tanuki.se/) 
+and VLC to create an audio http server that streams audio from your favorite livestreamer streams. 
+It is written in scala (and thus it requires java to be installed).
 
 
 ##Usage:

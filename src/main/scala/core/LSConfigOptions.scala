@@ -15,7 +15,7 @@ package core
  *
  */
 case class LSConfigOptions(name: String = "livestreamerconfig.txt",
-                           vlcLocation: String = "/Applications/VLC.app/Contents/MacOS/VLC",
+                           vlcLocation: String = OperatingSystem.getDefaultVLCLocation,
                            fileLocation: String, delay: String = "5000", ip: String,
                            vlcPort: String = "9999") {
   def validate: Boolean = validateIPAddress(ip) && validPort(vlcPort)

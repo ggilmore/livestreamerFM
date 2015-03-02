@@ -28,7 +28,7 @@ site on the supported site list for livestreamer.
 
 -~~add basic parsing of url so that there is an url -> audio_option matching~~ Done.
 
--add support for windows and linux (this involves figuring out how to look through the path maybe)
+-add support for windows and linux (this involves figuring out how to look through the path maybe), will involve some refactoring
 
 -write basic webui
 

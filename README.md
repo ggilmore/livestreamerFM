@@ -44,7 +44,7 @@ Ex:
 
     player = /Applications/VLC.app/Contents/MacOS/VLC
     delay = 5005
-    ipAndPort = 10.0.9.27:9999
+    ipAndPort = 192.168.1.1:9999
     livestreamerConfigLocation = /Users/gmgilmore/
 
 The options that you can choose from are `player` , `delay` , `ipAndPort` , and `livestreamerConfigLocation`. All these

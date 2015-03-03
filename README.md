@@ -5,7 +5,7 @@ and [VLC](https://www.videolan.org/vlc/index.html) to create an audio http serve
 livestreamer streams. 
 
 LivestreamerFM is written in scala (and thus requires java to be installed).
-Both VLC and Livestreamer must be installed before using this program. 
+Both VLC and Livestreamer must be installed before using this program.
 
 
 
@@ -38,7 +38,7 @@ command tells livestreamerFM where to store the generated file.
 
 `LIVESTREAMERFM_CONFIG_FILE_LOCATION`: The location of the LivestreamerFM config file, format described below.
 
-##Config file format:
+##LivestreamerFM config file format:
 
 Ex:
 

@@ -16,7 +16,7 @@ object LSFMConfigFileParser {
     val configFile = new File(pathToConfig)
     val lines = Source.fromFile(configFile).getLines().toVector
     val options: Map[String, String] = Map("player" -> OperatingSystem.getDefaultVLCLocation, "delay" -> "5000",
-      "ipAndPort" -> "localhost:9000", "livestreamerConfigLocation" -> {
+      "ipandport" -> "localhost:9000", "livestreamerconfiglocation" -> {
         val path = ArgParser.getClass.getProtectionDomain.getCodeSource.getLocation.getPath
         val fixedPath = path.subSequence(0, path.lastIndexOf(File.separator) + 1)
         fixedPath.toString
@@ -26,13 +26,13 @@ object LSFMConfigFileParser {
       if (line != null && !line.trim.isEmpty) {
         val splitLine = line.split("=")
         val (name, value) = (splitLine(0), splitLine(1))
-        options(name.trim) = value.trim
+        options(name.trim.toLowerCase) = value.trim.toLowerCase
       }
     }
 
 
-    new LSFMConfigOptions(options("player"), options("ipAndPort"), options("delay"), options
-      ("livestreamerConfigLocation"))
+    new LSFMConfigOptions(options("player"), options("ipandport"), options("delay"), options
+      ("livestreamerconfiglocation"))
   }
 
 

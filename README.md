@@ -8,8 +8,6 @@ LivestreamerFM is written in scala (and thus requires java to be installed).
 Both VLC and Livestreamer must be installed before using this program.
 
 
-
-
 ##Command-line usage:
 
 Run it from the command-line with these options:

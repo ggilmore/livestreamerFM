@@ -1,52 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="072632c9-20e8-4399-9edf-0590bc53b453" name="Default" comment="fixed ReadMe">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/inputs" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/inputs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/output" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/core/LSFMConfigFileParser.scala" afterPath="$PROJECT_DIR$/src/main/scala/core/LSFMConfigFileParser.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sbt_2.11-default.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sbt_2.11-default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_2.11-default.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_2.11-default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-compile.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-docs.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-optional.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-plugin.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-pom.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-provided.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-runtime.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue$sources_javadoc_2.11-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-compile.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-docs.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-optional.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-plugin.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-pom.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-provided.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-runtime.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/livestreamerfmtrue-livestreamerfmtrue_2.11-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/compile/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/compile/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue$sbt_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue$sbt_2.11/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue$sources_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue$sources_2.11/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue$sources_javadoc_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue$sources_javadoc_2.11/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue_2.11/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue$sbt_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue$sbt_2.11/1.0/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue$sources_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue$sources_2.11/1.0/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue$sources_javadoc_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue$sources_javadoc_2.11/1.0/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/livestreamerfmtrue/livestreamerfmtrue_2.11/1.0/resolved.xml.xml" />
+    <list default="true" id="072632c9-20e8-4399-9edf-0590bc53b453" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="livestreamerFMTrue.iws" />
@@ -81,11 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="1395">
-              <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.21042085" vertical-offset="645" max-vertical-offset="1395">
+              <caret line="50" column="107" selection-start-line="50" selection-start-column="107" selection-end-line="50" selection-end-column="107" />
               <folding />
             </state>
           </provider>
@@ -114,10 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LSFMConfigFileParser.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LSFMConfigFileParser.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/core/LSFMConfigFileParser.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.76559544" vertical-offset="45" max-vertical-offset="630">
+            <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="630">
               <caret line="33" column="60" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
               <folding />
             </state>
@@ -209,8 +165,8 @@
         <option value="$PROJECT_DIR$/src/main/scala/core/LSFMConfigOptions.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/core/LSConfigOptions.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/core_test/LSConfigOptionTest.scala" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/scala/core/LSFMConfigFileParser.scala" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -862,7 +818,7 @@
       <workItem from="1425327122505" duration="2387000" />
       <workItem from="1425331566642" duration="1781000" />
       <workItem from="1425334788940" duration="5076000" />
-      <workItem from="1425357730923" duration="76000" />
+      <workItem from="1425357730923" duration="179000" />
     </task>
     <task id="LOCAL-00001" summary="fix readme">
       <created>1425265104624</created>
@@ -1032,11 +988,17 @@
       <option name="project" value="LOCAL" />
       <updated>1425357575156</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="loosened case requirements for config file parameters (case insensitive)">
+      <created>1425357852712</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1425357852712</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34883000" />
+    <option name="totallyTimeSpent" value="34986000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="851" extended-state="6" />
@@ -1064,7 +1026,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33055556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28772378" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28772378" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1132,7 +1094,8 @@
     <MESSAGE value="dummy -&gt; http" />
     <MESSAGE value="added minor fixes to config file parser, cleaned up some other code" />
     <MESSAGE value="fixed ReadMe" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed ReadMe" />
+    <MESSAGE value="loosened case requirements for config file parameters (case insensitive)" />
+    <option name="LAST_COMMIT_MESSAGE" value="loosened case requirements for config file parameters (case insensitive)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1516,23 +1479,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/core/LSFMConfigFileParser.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="630">
+          <caret line="33" column="60" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="1395">
-          <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.21042085" vertical-offset="645" max-vertical-offset="1395">
+          <caret line="50" column="107" selection-start-line="50" selection-start-column="107" selection-end-line="50" selection-end-column="107" />
           <folding />
         </state>
       </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/core/LSFMConfigFileParser.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76559544" vertical-offset="45" max-vertical-offset="630">
-          <caret line="33" column="60" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
-          <folding />
-        </state>
       </provider>
     </entry>
   </component>

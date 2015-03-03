@@ -48,7 +48,7 @@ Ex:
     livestreamerConfigLocation = /Users/gmgilmore/
 
 The options that you can choose from are `player` , `delay` , `ipAndPort` , and `livestreamerConfigLocation`. All these
-options are optional (heh) - you can include any of them, or none of them.
+options are optional (heh) - you can include any of them, or none of them. They are also case-insensitive. 
 
 The file should be a plain text file with each new line having the following format:
 

@@ -47,7 +47,7 @@ Ex:
     ipAndPort = 10.0.9.27:9999
     livestreamerConfigLocation = /Users/gmgilmore/
 
-The options that you can choose from are `player`, `delay`, `ipAndPort`, and `livestreamerConfigLocation`. All these 
+The options that you can choose from are `player` , `delay` , `ipAndPort` , and `livestreamerConfigLocation`. All these
 options are optional (heh) - you can include any of them, or none of them.
 
 The file should be a plain text file with each new line having the following format:

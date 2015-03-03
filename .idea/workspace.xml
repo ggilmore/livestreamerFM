@@ -2,6 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="072632c9-20e8-4399-9edf-0590bc53b453" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/core/ArgParser$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/core/ArgParser$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$10.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$11.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$12.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$2.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$3.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$4.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$5.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$6.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$7.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$8.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$9.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest$$anonfun$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/core_test/LSConfigOptionTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/core/LSConfigOptions.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/core/LSConfigOptions.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/core/OperatingSystem.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/core/OperatingSystem.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -43,8 +59,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36072144" vertical-offset="0" max-vertical-offset="1380">
-              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.7815631" vertical-offset="360" max-vertical-offset="1380">
+              <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -819,7 +835,7 @@
       <workItem from="1425320336189" duration="5109000" />
       <workItem from="1425327122505" duration="2387000" />
       <workItem from="1425331566642" duration="1781000" />
-      <workItem from="1425334788940" duration="4535000" />
+      <workItem from="1425334788940" duration="4602000" />
     </task>
     <task id="LOCAL-00001" summary="fix readme">
       <created>1425265104624</created>
@@ -947,11 +963,17 @@
       <option name="project" value="LOCAL" />
       <updated>1425357133471</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="fixed ReadMe">
+      <created>1425357172561</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1425357172561</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34266000" />
+    <option name="totallyTimeSpent" value="34333000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="851" extended-state="6" />
@@ -979,7 +1001,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33055556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28772378" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28772378" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1448,8 +1470,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36072144" vertical-offset="0" max-vertical-offset="1380">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.7815631" vertical-offset="360" max-vertical-offset="1380">
+          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
           <folding />
         </state>
       </provider>

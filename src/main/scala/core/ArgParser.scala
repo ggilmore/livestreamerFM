@@ -32,18 +32,25 @@ object ArgParser extends App {
   private def yesConfigFile(args: Array[String]) = {
     val configPath = args(0)
     val url = args(1)
-    val myOptions = LSFMConfigFileParser.parseConfigFile(configPath)
-    val (ip, port) = splitIPandPort(myOptions.ipAndPort)
-    val livestreamerOptions = new LSConfigOptions(vlcLocation = myOptions.playerLocation, fileLocation = myOptions
-      .livestreamerConfigLocation, delay = myOptions.delay, ip = ip, vlcPort = port)
+    val myOptions = LSFMConfigFileParser.parseConfigFile(configPath) 
+    try {
 
-    println("\n\n****** " + url + " AUDIO STREAM LOCATED @ http://" + ip + ":" + port + " ******\n\n")
-    
-    LivestreamerConfigFileWriter.writeNewConfigFile(livestreamerOptions)
 
-    createLiveStreamerProcess(configLocation = myOptions.livestreamerConfigLocation + livestreamerOptions.name, url =
-      url, audioOptionName =
-      AudioSettings.getAudioSettingFromURL(url))
+      val (ip, port) = splitIPandPort(myOptions.ipAndPort)
+      val livestreamerOptions = new LSConfigOptions(vlcLocation = myOptions.playerLocation, fileLocation = myOptions
+        .livestreamerConfigLocation, delay = myOptions.delay, ip = ip, vlcPort = port)
+
+      println("\n\n****** " + url + " AUDIO STREAM LOCATED @ http://" + ip + ":" + port + " ******\n\n")
+
+      LivestreamerConfigFileWriter.writeNewConfigFile(livestreamerOptions)
+
+      createLiveStreamerProcess(configLocation = myOptions.livestreamerConfigLocation + livestreamerOptions.name, url =
+        url, audioOptionName =
+        AudioSettings.getAudioSettingFromURL(url))
+    }catch {
+      case e: ArrayIndexOutOfBoundsException => println(DEFAULT_USAGE)
+      
+    }
   }
 
   /**
@@ -57,16 +64,21 @@ object ArgParser extends App {
   private def noConfigFile(args: Array[String]) = {
     if (args.size != 3) println(DEFAULT_USAGE)
     else {
-      val url = args(0)
-      val (ipAddress, port) = splitIPandPort(args(1))
-      val configLocation = args(2)
-      val option = new LSConfigOptions(fileLocation = configLocation, ip = ipAddress, vlcPort = port)
-      if (!option.validate) println(IP_OR_PORT_ERROR)
-      else {
-        println("\n\n****** " + url + " AUDIO STREAM LOCATED @ http://" + ipAddress + ":" + port + " ******\n\n")
-        LivestreamerConfigFileWriter.writeNewConfigFile(option)
-        createLiveStreamerProcess(configLocation = option.fileLocation + option.name, url = url, audioOptionName =
-          AudioSettings.getAudioSettingFromURL(url))
+      val url = args(0) 
+      try {
+        val (ipAddress, port) = splitIPandPort(args(1))
+        val configLocation = args(2)
+        val option = new LSConfigOptions(fileLocation = configLocation, ip = ipAddress, vlcPort = port)
+        if (!option.validateNetworkInfo) println(IP_OR_PORT_ERROR)
+        else {
+          println("\n\n****** " + url + " AUDIO STREAM LOCATED @ http://" + ipAddress + ":" + port + " ******\n\n")
+          LivestreamerConfigFileWriter.writeNewConfigFile(option)
+          createLiveStreamerProcess(configLocation = option.fileLocation + option.name, url = url, audioOptionName =
+            AudioSettings.getAudioSettingFromURL(url))
+        }
+      } catch {
+        case e: ArrayIndexOutOfBoundsException => println(DEFAULT_USAGE)
+        
       }
 
     }
@@ -85,7 +97,7 @@ object ArgParser extends App {
                                         configLocation: String, url: String, audioOptionName: String) {
 
 
-    println(livestreamerPath + " --config " + configLocation + " " + url + " " + audioOptionName)
+//    println(livestreamerPath + " --config " + configLocation + " " + url + " " + audioOptionName)
     try {
       val lsprocess = Process(livestreamerPath + " --config " + configLocation + " " + url + " " + audioOptionName)
       val runningProcess = lsprocess.run()

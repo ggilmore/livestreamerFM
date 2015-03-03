@@ -23,10 +23,13 @@ object LSFMConfigFileParser {
       })
 
     for (line <- lines) {
-      val splitLine = line.split("=")
-      val (name, value) = (splitLine(0), splitLine(1))
-      options(name.trim) = value.trim
+      if (line != null && !line.trim.isEmpty) {
+        val splitLine = line.split("=")
+        val (name, value) = (splitLine(0), splitLine(1))
+        options(name.trim) = value.trim
+      }
     }
+
 
     new LSFMConfigOptions(options("player"), options("ipAndPort"), options("delay"), options
       ("livestreamerConfigLocation"))

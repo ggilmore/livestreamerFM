@@ -51,9 +51,10 @@ The options that you can choose from are `player` , `delay` , `ipAndPort` , and 
 options are optional (heh) - you can include any of them, or none of them.
 
 The file should be a plain text file with each new line having the following format:
-    [option] = [value]
+
+    [OPTION] = [VALUE]
     
-If you don't follow this format, livestreamer FM will throw an exception. 
+If you don't follow this format, livestreamerFM will throw an exception when it tries to read the file.
 
 ###Option descriptions:
 

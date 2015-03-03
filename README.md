@@ -1,6 +1,6 @@
 # livestreamerFM
 
-Right now, this is just an extremely small commandline utility that uses [Livestreamer](http://livestreamer.tanuki.se/)
+Right now, this is just an extremely small command-line utility that uses [Livestreamer](http://livestreamer.tanuki.se/)
 and [VLC](https://www.videolan.org/vlc/index.html) to create an audio http server that streams audio from your favorite 
 livestreamer streams. 
 
@@ -10,9 +10,9 @@ Both VLC and Livestreamer must be installed before using this program.
 
 
 
-##Command line usage:
+##Command-line usage:
 
-Run it from the command line with these options: 
+Run it from the command-line with these options:
 
     [STREAM_URL] [IP_ADDRESS] [PORT] [LIVESTREAMER_CONFIG_FILE_LOCATION]
 
@@ -48,7 +48,7 @@ Ex:
     livestreamerConfigLocation = /Users/gmgilmore/
 
 The options that you can choose from are `player` , `delay` , `ipAndPort` , and `livestreamerConfigLocation`. All these
-options are optional (heh) - you can include any of them, or none of them. They are also case-insensitive. 
+options are optional (heh) - you can include any of them, or none of them. They are also case-insensitive.
 
 The file should be a plain text file with each new line having the following format:
 

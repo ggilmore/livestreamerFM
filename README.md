@@ -38,8 +38,13 @@ command tells livestreamerFM where to store the generated file.
 
 `LIVESTREAMERFM_CONFIG_FILE_LOCATION`: The location of the LivestreamerFM config file, format described below.
 
-LivestreamerFM will then 
+LivestreamerFM will then display the location of the audio stream, so that you can copy and paste it into your 
+favorite audio player. 
 
+Example:
+
+    ****** twitch.tv/arteezy AUDIO STREAM LOCATED @ http://192.168.1.1:9999 ******
+    
 ##LivestreamerFM config file format:
 
 Ex:

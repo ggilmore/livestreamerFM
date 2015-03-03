@@ -38,6 +38,8 @@ command tells livestreamerFM where to store the generated file.
 
 `LIVESTREAMERFM_CONFIG_FILE_LOCATION`: The location of the LivestreamerFM config file, format described below.
 
+LivestreamerFM will then 
+
 ##LivestreamerFM config file format:
 
 Ex:

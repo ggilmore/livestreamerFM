@@ -10,7 +10,7 @@ Both VLC and Livestreamer must be installed before using this program.
 
 
 
-##Usage:
+##Command line usage:
 
 Run it from the command line with these options: 
 

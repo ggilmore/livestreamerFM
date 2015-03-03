@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="072632c9-20e8-4399-9edf-0590bc53b453" name="Default" comment="added minor fixes to config file parser, cleaned up some other code">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/core/LivestreamerConfigFileWriter$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/core/LivestreamerConfigFileWriter$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/core/ArgParser.scala" afterPath="$PROJECT_DIR$/src/main/scala/core/ArgParser.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/core_test/LSConfigOptionTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/core_test/LSConfigOptionTest.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/core/LSConfigOptions.scala" afterPath="$PROJECT_DIR$/src/main/scala/core/LSConfigOptions.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/core/LSFMConfigFileParser.scala" afterPath="$PROJECT_DIR$/src/main/scala/core/LSFMConfigFileParser.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/core/LSFMConfigOptions.scala" afterPath="$PROJECT_DIR$/src/main/scala/core/LSFMConfigOptions.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/core/LivestreamerConfigFileWriter.scala" afterPath="$PROJECT_DIR$/src/main/scala/core/LivestreamerConfigFileWriter.scala" />
+    <list default="true" id="072632c9-20e8-4399-9edf-0590bc53b453" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/core/ArgParser$$anonfun$createLiveStreamerProcess$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/core/ArgParser$$anonfun$createLiveStreamerProcess$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/core/ArgParser$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/core/ArgParser$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="livestreamerFMTrue.iws" />
@@ -43,23 +39,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="60" max-vertical-offset="1305">
-              <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
+            <state vertical-scroll-proportion="0.77380955" vertical-offset="105" max-vertical-offset="1305">
+              <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArgParser.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ArgParser.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/core/ArgParser.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37869823" vertical-offset="1353" max-vertical-offset="1860">
+            <state vertical-scroll-proportion="-7.111111" vertical-offset="1353" max-vertical-offset="1860">
               <caret line="105" column="23" selection-start-line="105" selection-start-column="23" selection-end-line="105" selection-end-column="23" />
               <folding />
             </state>
@@ -167,7 +163,6 @@
         <option value="$PROJECT_DIR$/project/assembly.sbt" />
         <option value="$PROJECT_DIR$/src/test/scala/core_test/AudioSettingsTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/core/AudioSettings.scala" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/scala/core/LivestreamerConfigFileWriter.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/core/ArgParser.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/core/LSFMConfigFileParser.scala" />
@@ -175,6 +170,7 @@
         <option value="$PROJECT_DIR$/src/main/scala/core/LSFMConfigOptions.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/core/LSConfigOptions.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/core_test/LSConfigOptionTest.scala" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -825,7 +821,7 @@
       <workItem from="1425320336189" duration="5109000" />
       <workItem from="1425327122505" duration="2387000" />
       <workItem from="1425331566642" duration="1781000" />
-      <workItem from="1425334788940" duration="4007000" />
+      <workItem from="1425334788940" duration="4171000" />
     </task>
     <task id="LOCAL-00001" summary="fix readme">
       <created>1425265104624</created>
@@ -911,11 +907,17 @@
       <option name="project" value="LOCAL" />
       <updated>1425339541753</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added minor fixes to config file parser, cleaned up some other code">
+      <created>1425356592826</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1425356592826</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33738000" />
+    <option name="totallyTimeSpent" value="33902000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="851" extended-state="6" />
@@ -1332,17 +1334,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="60" max-vertical-offset="1305">
-          <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/core/LivestreamerConfigFileWriter.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="101" max-vertical-offset="630">
@@ -1411,8 +1402,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/core/ArgParser.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37869823" vertical-offset="1353" max-vertical-offset="1860">
+        <state vertical-scroll-proportion="-7.111111" vertical-offset="1353" max-vertical-offset="1860">
           <caret line="105" column="23" selection-start-line="105" selection-start-column="23" selection-end-line="105" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77380955" vertical-offset="105" max-vertical-offset="1305">
+          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
           <folding />
         </state>
       </provider>

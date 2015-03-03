@@ -22,16 +22,16 @@ Or:
 
     --config ~/Desktop/LSFMconfig.txt twitch.tv/arteezy
 
-STREAM_URL: The URL of the stream that you want to play.
+`STREAM_URL`: The URL of the stream that you want to play.
 
-IP_ADDRESS: The ip address that you want the http server to bind to. 
+`IP_ADDRESS`: The ip address that you want the http server to bind to.
 
-PORT: The port that you want the http server to bind to. 
+`PORT`: The port that you want the http server to bind to.
 
-LIVESTREAMER_CONFIG_FILE_LOCATION: This utility generates a config file that the Livestreamer app uses. This part of the 
+`LIVESTREAMER_CONFIG_FILE_LOCATION`: This utility generates a config file that the Livestreamer app uses. This part of the
 command tells livestreamerFM where to store the generated file. 
 
-LIVESTREAMERFM_CONFIG_FILE_LOCATION: The location of the LivestreamerFM config file, format described below. 
+`LIVESTREAMERFM_CONFIG_FILE_LOCATION`: The location of the LivestreamerFM config file, format described below.
 
 ##Config file format:
 
@@ -52,16 +52,16 @@ If you don't follow this format, livestreamer FM will throw an exception.
 
 ###Option descriptions:
 
-player - the value should be path to the vlc executable on your machine. If this option is not used, LivestreamerFM will 
+`player` - the value should be path to the vlc executable on your machine. If this option is not used, LivestreamerFM will
 attempt to guess where VLC is located on your machine. 
 
-delay - the value should be number of milliseconds that you want LivestreamerFM to cache the audio for. This is used to 
+`delay` - the value should be number of milliseconds that you want LivestreamerFM to cache the audio for. This is used to
 improve performance and mitigate stuttering. If this option is not used, delay will default to 5000 ms.
 
-ipAndPort - the value should the ipAdress that you want the audio server to bind to,followed by the port that you want 
+`ipAndPort` - the value should the ipAdress that you want the audio server to bind to,followed by the port that you want
 the audio server to use, separated by a colon. If this option is not used, ipAndPort will default to localhost:9999. 
 
-livestreamerConfigLocation - the value should be the path that you want the livestreamer config file that is generated 
+`livestreamerConfigLocation` - the value should be the path that you want the livestreamer config file that is generated
 by livestreamerFM to be saved in. If this option is not used, livestreamerConfigLocation will default to the directory 
 that livestreamerFM is running in. 
 

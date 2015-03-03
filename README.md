@@ -56,13 +56,13 @@ If you don't follow this format, livestreamer FM will throw an exception.
 attempt to guess where VLC is located on your machine. 
 
 `delay` - the value should be number of milliseconds that you want LivestreamerFM to cache the audio for. This is used to
-improve performance and mitigate stuttering. If this option is not used, delay will default to 5000 ms.
+improve performance and mitigate stuttering. If this option is not used, `delay` will default to 5000 ms.
 
 `ipAndPort` - the value should the ipAdress that you want the audio server to bind to,followed by the port that you want
-the audio server to use, separated by a colon. If this option is not used, ipAndPort will default to localhost:9999. 
+the audio server to use, separated by a colon. If this option is not used, `ipAndPort` will default to localhost:9999.
 
 `livestreamerConfigLocation` - the value should be the path that you want the livestreamer config file that is generated
-by livestreamerFM to be saved in. If this option is not used, livestreamerConfigLocation will default to the directory 
+by livestreamerFM to be saved in. If this option is not used, `livestreamerConfigLocation` will default to the directory
 that livestreamerFM is running in. 
 
 ##TODO:

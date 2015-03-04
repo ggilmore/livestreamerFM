@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="072632c9-20e8-4399-9edf-0590bc53b453" name="Default" comment="">
+    <list default="true" id="072632c9-20e8-4399-9edf-0590bc53b453" name="Default" comment="fixed read me">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="livestreamerFMTrue.iws" />
@@ -43,7 +44,7 @@
           </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.24390244" vertical-offset="0" max-vertical-offset="1515">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -880,7 +881,7 @@
       <workItem from="1425334788940" duration="5076000" />
       <workItem from="1425357730923" duration="694000" />
       <workItem from="1425394403691" duration="33621000" />
-      <workItem from="1425491534615" duration="7762000" />
+      <workItem from="1425491534615" duration="7879000" />
     </task>
     <task id="LOCAL-00001" summary="fix readme">
       <created>1425265104624</created>
@@ -1104,11 +1105,17 @@
       <option name="project" value="LOCAL" />
       <updated>1425503198984</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="fixed read me">
+      <created>1425503228744</created>
+      <option name="number" value="00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1425503228744</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76884000" />
+    <option name="totallyTimeSpent" value="77001000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="851" extended-state="6" />
@@ -1602,7 +1609,7 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24390244" vertical-offset="0" max-vertical-offset="1515">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
           <folding />
         </state>
       </provider>

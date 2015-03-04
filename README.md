@@ -10,7 +10,7 @@ LivestreamerFM is written in Scala (and thus requires Java to be installed). If 
 you'll need [Scala](http://www.scala-lang.org/), [SBT](http://www.scala-sbt.org/), and something like 
 [SBT-Assembly](https://github.com/sbt/sbt-assembly) installed.  
 
-Both VLC and Livestreamer must be installed before using this program. Installation instructions for livestreamer are 
+Both VLC and Livestreamer must be installed before using this program. Installation instructions for Livestreamer are
 found [here](http://livestreamer.tanuki.se/install.html) and installation instructions for VLC are found
 [here](https://www.videolan.org/vlc/index.html#download). 
 

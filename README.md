@@ -46,8 +46,8 @@ Full Example (plus `java -jar` call):
 `PORT`: The port that you want the http server to bind to.
 
 `LIVESTREAMER_CONFIG_FILE_LOCATION`: This utility generates a config file that the Livestreamer app uses. This part of the
-command tells livestreamerFM what folder to store the generated file in. Remember that path should end in a `/` 
-(or a `\` if you are using Windows). 
+command tells livestreamerFM what folder to store the generated file in. Remember that the path should end in a `/`
+(or a `\` if you are using Windows).
 
 `LIVESTREAMERFM_CONFIG_FILE_LOCATION`: The location of the LivestreamerFM config file, format described below.
 

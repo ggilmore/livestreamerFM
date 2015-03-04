@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="072632c9-20e8-4399-9edf-0590bc53b453" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/core/ArgParser.scala" afterPath="$PROJECT_DIR$/src/main/scala/core/ArgParser.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/core_test/AudioTempTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/core_test/AudioTempTest.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/core/GeneralError.scala" afterPath="$PROJECT_DIR$/src/main/scala/core/GeneralError.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/core/LSConfigOptions.scala" afterPath="$PROJECT_DIR$/src/main/scala/core/LSConfigOptions.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/core/LSFMConfigFileParser.scala" afterPath="$PROJECT_DIR$/src/main/scala/core/LSFMConfigFileParser.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/core/LivestreamerConfigFileWriter.scala" afterPath="$PROJECT_DIR$/src/main/scala/core/LivestreamerConfigFileWriter.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -43,11 +37,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LSFMConfigFileParser.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.4930016" vertical-offset="0" max-vertical-offset="1515">
+              <caret line="64" column="102" selection-start-line="64" selection-start-column="102" selection-end-line="64" selection-end-column="102" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LSFMConfigFileParser.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/core/LSFMConfigFileParser.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2897474" vertical-offset="0" max-vertical-offset="1635">
-              <caret line="13" column="88" selection-start-line="13" selection-start-column="88" selection-end-line="13" selection-end-column="88" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="1635">
+              <caret line="13" column="87" selection-start-line="13" selection-start-column="87" selection-end-line="13" selection-end-column="87" />
               <folding />
             </state>
           </provider>
@@ -121,13 +128,13 @@
         <option value="$PROJECT_DIR$/src/main/scala/core/LSFMConfigOptions.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/core/Util.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/core_test/LSFMConfigFileParserTest.scala" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/scala/core/LSConfigOptions.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/core_test/AudioTempTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/core/ArgParser.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/core/GeneralError.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/core/LivestreamerConfigFileWriter.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/core/LSFMConfigFileParser.scala" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -904,7 +911,7 @@
       <workItem from="1425334788940" duration="5076000" />
       <workItem from="1425357730923" duration="694000" />
       <workItem from="1425394403691" duration="33621000" />
-      <workItem from="1425491534615" duration="8890000" />
+      <workItem from="1425491534615" duration="8996000" />
     </task>
     <task id="LOCAL-00001" summary="fix readme">
       <created>1425265104624</created>
@@ -1146,11 +1153,17 @@
       <option name="project" value="LOCAL" />
       <updated>1425503364108</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="spelling errors&#10;">
+      <created>1425504657999</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1425504657999</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78012000" />
+    <option name="totallyTimeSpent" value="78118000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="851" extended-state="6" />
@@ -1251,7 +1264,8 @@
     <MESSAGE value="major refactoring and code clean up done" />
     <MESSAGE value="major refactoring and code clean up done second round" />
     <MESSAGE value="fixed read me" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed read me" />
+    <MESSAGE value="spelling errors&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="spelling errors&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1621,17 +1635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.5666666" vertical-offset="283" max-vertical-offset="1515">
-          <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/core/GeneralError.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="62" max-vertical-offset="765">
@@ -1660,10 +1663,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/core/LSFMConfigFileParser.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2897474" vertical-offset="0" max-vertical-offset="1635">
-          <caret line="13" column="88" selection-start-line="13" selection-start-column="88" selection-end-line="13" selection-end-column="88" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="1635">
+          <caret line="13" column="87" selection-start-line="13" selection-start-column="87" selection-end-line="13" selection-end-column="87" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4930016" vertical-offset="0" max-vertical-offset="1515">
+          <caret line="64" column="102" selection-start-line="64" selection-start-column="102" selection-end-line="64" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>

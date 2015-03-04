@@ -62,7 +62,7 @@ The file should be a plain text file with each new line having the following for
 The options that you can choose from are `player` , `delay` , `ipAndPort` , and `livestreamerConfigLocation`. All these
 options are optional (heh) - you can include any of them, or none of them. They are also case-insensitive.
     
-If you don't follow this format, livestreamerFM will throw an exception when it tries to read the file.
+If you don't follow this format, livestreamerFM will display an error when it tries to read the file. 
 
 ###Option descriptions:
 

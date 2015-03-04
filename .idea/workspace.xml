@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="072632c9-20e8-4399-9edf-0590bc53b453" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/core/ArgParser.scala" afterPath="$PROJECT_DIR$/src/main/scala/core/ArgParser.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="livestreamerFMTrue.iws" />
@@ -37,24 +37,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33834586" vertical-offset="0" max-vertical-offset="1575">
+            <state vertical-scroll-proportion="1.5" vertical-offset="225" max-vertical-offset="1575">
               <caret line="12" column="102" selection-start-line="12" selection-start-column="102" selection-end-line="12" selection-end-column="102" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArgParser.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ArgParser.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/core/ArgParser.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="518" max-vertical-offset="2085">
-              <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+            <state vertical-scroll-proportion="3.7366548" vertical-offset="0" max-vertical-offset="2295">
+              <caret line="140" column="28" selection-start-line="140" selection-start-column="28" selection-end-line="140" selection-end-column="28" />
               <folding>
                 <element signature="e#14#71#0" expanded="true" />
               </folding>
@@ -105,8 +105,8 @@
         <option value="$PROJECT_DIR$/src/main/scala/core/LSConfigOptions.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/core/LivestreamerConfigFileWriter.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/core/LSFMConfigFileParser.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/core/ArgParser.scala" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/scala/core/ArgParser.scala" />
       </list>
     </option>
   </component>
@@ -831,7 +831,7 @@
       <workItem from="1425334788940" duration="5076000" />
       <workItem from="1425357730923" duration="694000" />
       <workItem from="1425394403691" duration="33621000" />
-      <workItem from="1425491534615" duration="14651000" />
+      <workItem from="1425491534615" duration="15249000" />
     </task>
     <task id="LOCAL-00001" summary="fix readme">
       <created>1425265104624</created>
@@ -1091,11 +1091,17 @@
       <option name="project" value="LOCAL" />
       <updated>1425512180065</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="fixed README.md">
+      <created>1425512328800</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1425512328800</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83773000" />
+    <option name="totallyTimeSpent" value="84371000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="851" extended-state="6" />
@@ -1185,7 +1191,6 @@
     <MESSAGE value="fixed readme strike-through" />
     <MESSAGE value="got ride of two useless functions in ArgParser&#10;" />
     <MESSAGE value="updated README.MD, added support for LivestreamerFM config files and attempted guessing of VLC paths for OSX, Windows, and Linux" />
-    <MESSAGE value="fixed README.md" />
     <MESSAGE value="added new compiled jar" />
     <MESSAGE value="dummy -&gt; http" />
     <MESSAGE value="added minor fixes to config file parser, cleaned up some other code" />
@@ -1198,7 +1203,8 @@
     <MESSAGE value="fixed read me" />
     <MESSAGE value="spelling errors&#10;" />
     <MESSAGE value="added tests, specs, and updated README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="added tests, specs, and updated README.md" />
+    <MESSAGE value="fixed README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed README.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1596,25 +1602,25 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/core/ArgParser.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="518" max-vertical-offset="2085">
-          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
-          <folding>
-            <element signature="e#14#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33834586" vertical-offset="0" max-vertical-offset="1575">
+        <state vertical-scroll-proportion="1.5" vertical-offset="225" max-vertical-offset="1575">
           <caret line="12" column="102" selection-start-line="12" selection-start-column="102" selection-end-line="12" selection-end-column="102" />
           <folding />
         </state>
       </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/core/ArgParser.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.7366548" vertical-offset="0" max-vertical-offset="2295">
+          <caret line="140" column="28" selection-start-line="140" selection-start-column="28" selection-end-line="140" selection-end-column="28" />
+          <folding>
+            <element signature="e#14#71#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

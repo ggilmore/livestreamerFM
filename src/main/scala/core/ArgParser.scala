@@ -78,7 +78,7 @@ object ArgParser extends App {
 
   /**
    * Starts the livestreamer process with all the correct flags set, prints the location of the audio stream. 
-   *  Prints an error message if there was an error when trying to run livestreamer. 
+   *  Prints an error message instead if there was an error when trying to run livestreamer. 
    *  @param options a LiveStreamerProcessInfo instance that contains all the necessary settings in order to configure 
    *                 livestreamer. 
    */
@@ -101,11 +101,14 @@ object ArgParser extends App {
   }
 
   /**
-   * * 
-   * @param url
-   * @param ipAndPort
-   * @param lsConfigLocation
-   * @return
+   * *Run by ArgParser when there is no config flag set. 
+   * @param url the url to pass to livestreamer to grab the stream from
+   * @param ipAndPort the ip and port that you want the HTTP audio server to bind to, format is ip:Port, 
+   *                  ex: 233.233.233:9999
+   * @param lsConfigLocation the path to the folder that you want LivestreamerFM to use when it save the configuration 
+   *                         file that it uses to control livestreamer 
+   * @return a Set of CoreError's if there was an issue when parsing ipAndPort or writing the configuration file, or  a 
+   *          LiveStreamerProcessInfo that contains all the necessary infromation in order to run the livestreamer process. 
    */
   private def verifyNoConfigFileArguments(url:String, ipAndPort:String, lsConfigLocation:String):Either[Set[CoreError], LiveStreamerProcessInfo] = {
 
@@ -125,7 +128,18 @@ object ArgParser extends App {
     }
     
   }
-    
+
+  /**
+   * * Private container class that stores all the parameters that are passed to the livestreaemer processes when we 
+   * * start it. 
+   * @param livestreamerPath the path to the livestreamer installation
+   * @param configLocation the path to the location of the configuration file that LivestreamerFM wrote 
+   * @param url the url to grab the stream from 
+   * @param ip the ip that the HTTP audio server should bind to 
+   * @param port the port that the HTTP audio server should use 
+   * @param audioOptionName the stream option passed to livestreamer, determined by the particular livestreamer plugin 
+   *                        that we are using.
+   */
     private case class LiveStreamerProcessInfo(livestreamerPath:String = "livestreamer",
     configLocation:String, url:String, ip:String, port:String,audioOptionName:String)
   

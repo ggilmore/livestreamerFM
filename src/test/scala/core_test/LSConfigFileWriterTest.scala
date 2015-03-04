@@ -15,7 +15,7 @@ class LSConfigFileWriterTest extends FlatSpec with Matchers {
   "LSConfigFileWriter" should "create a new file if none exists in the given path" in {
     val config = new File("src/test/resources/livestreamerconfig.txt")
     assert (!config.exists)
-    val options = new LSConfigOptions(fileLocation ="src/test/resources/", ip = "localhost" )
+    val options = LSConfigOptions(fileLocation ="src/test/resources/", ip = "localhost" )
     LivestreamerConfigFileWriter.writeNewConfigFile(options)
     val written_config = new File("src/test/resources/livestreamerconfig.txt")
     assert (written_config.exists)
@@ -43,10 +43,8 @@ class LSConfigFileWriterTest extends FlatSpec with Matchers {
     
     //no line in the file contains garbage 
     assert(!Source.fromFile(garbageFile).getLines.forall(line => line.contains("GARBAGE")))
-    
-    var foundPlayer = false
-    for (line <-Source.fromFile(garbageFile).getLines) if (line.contains("player")) foundPlayer = true
-    assert(foundPlayer)
+
+    assert(!Source.fromFile(garbageFile).getLines.forall(x => !x.contains("player")))
     
     garbageFile.delete
 

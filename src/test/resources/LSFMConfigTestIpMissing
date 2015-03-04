@@ -1,0 +1,4 @@
+player = /Applications/VLC.app/Contents/MacOS/VLC
+delay = 5000 
+
+livestreamerConfigLocation = /Users/gmgilmore/

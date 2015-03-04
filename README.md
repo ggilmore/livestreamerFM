@@ -52,12 +52,12 @@ Ex:
     ipAndPort = 192.168.1.1:9999
     livestreamerConfigLocation = /Users/gmgilmore/
 
-The options that you can choose from are `player` , `delay` , `ipAndPort` , and `livestreamerConfigLocation`. All these
-options are optional (heh) - you can include any of them, or none of them. They are also case-insensitive.
-
 The file should be a plain text file with each new line having the following format:
 
     [OPTION] = [VALUE]
+
+The options that you can choose from are `player` , `delay` , `ipAndPort` , and `livestreamerConfigLocation`. All these
+options are optional (heh) - you can include any of them, or none of them. They are also case-insensitive.
     
 If you don't follow this format, livestreamerFM will throw an exception when it tries to read the file.
 

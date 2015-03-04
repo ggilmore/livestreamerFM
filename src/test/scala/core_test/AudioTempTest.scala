@@ -6,9 +6,9 @@ import org.scalatest.{FlatSpec, Matchers}
 /**
  * Created by gmgilmore on 3/2/15.
  */
-class AudioSettingsTest extends FlatSpec with Matchers {
+class AudioTempTest extends FlatSpec with Matchers {
 
-  "AudioSettings.getAudioSettingFromURL" should "not return 'best' for a twitch.tv url that lacks 'www' and the " +
+  "AudioTemp.getAudioSettingFromURL" should "not return 'best' for a twitch.tv url that lacks 'www' and the " +
     "proctcol" in {
     assert(!(getAudioSettingFromURL("twitch.tv/arteezy") == "best"))
 

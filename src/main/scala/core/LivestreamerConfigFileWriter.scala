@@ -9,17 +9,24 @@ object LivestreamerConfigFileWriter {
    * Creates a new configuration file for Livestreamer
    * @param options = the options to write into the config file
    *
-   * @return a text file that contains all the configuration options 
-   *         necessary to configure livestreamer
+   * @return either nothing if the configuraiton file was succesfully written, or a LivestreamerConfigFileWriterError
+   *         *         if the path given by "options" was invalid
    */
-  def writeNewConfigFile(options: LSConfigOptions) = {
-    val writer = new PrintWriter(new File(options.fileLocation + options.name))
-    val playerOptions = ("player=" + options.vlcLocation + " -I http —---network-caching <" + options.delay +
-      "> —-playandexit --no-sout-video --sout-audio --sout '#standard{access=http,mux=asf,vcodec=h264,acodec=mp4a,dst="
-      + options.ip + ":" + options.vlcPort + "}'")
-    writer.write(DO_NOT_EDIT + "\n")
-    writer.write(playerOptions)
-    writer.close
+  def writeNewConfigFile(options: LSConfigOptions): Option[LivestreamerConfigFileWriterError] = {
+    try {
+      val writer = new PrintWriter(new File(options.fileLocation + options.name))
+      val playerOptions = s"player=${options.vlcLocation} -I http —---network-caching <${options.delay}> " +
+        s"—-playandexit --no-sout-video --sout-audio --sout '#standard{access=http,mux=asf,vcodec=h264,acodec=mp4a," +
+        s"dst=${options.ip}:${options.vlcPort}}'"
+      writer.write(DO_NOT_EDIT + "\n")
+      writer.write(playerOptions)
+      writer.close
+      None
+    }
+    catch {
+      case e: FileNotFoundException => Some(BadConfigPath)
+    }
+
   }
 
   //  def checkFile(filePath: String): Boolean = {
@@ -35,3 +42,7 @@ object LivestreamerConfigFileWriter {
   //  }
 
 }
+
+sealed trait LivestreamerConfigFileWriterError
+
+final case object BadConfigPath extends LivestreamerConfigFileWriterError

@@ -1,0 +1,3 @@
+player = /Applications/VLC.app/Contents/MacOS/VLC
+delay = 5000 
+ipAndPort = localhost:9999

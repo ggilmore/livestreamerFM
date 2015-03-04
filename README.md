@@ -17,6 +17,8 @@ found [here](http://livestreamer.tanuki.se/install.html) and installation instru
 Make sure that Livestreamer is in your system path (this should be done automatically when installing livestreamer).
 ##Command-line usage:
 
+
+
 Run it from the command-line with these options:
 
     [STREAM_URL] [IP_ADDRESS] [PORT] [LIVESTREAMER_CONFIG_FILE_LOCATION]
@@ -28,9 +30,14 @@ Or:
 Example: 
 
     twitch.tv/arteezy localhost 9999 ~/configs 
+
 Or: 
 
     --config ~/Desktop/LSFMconfig.txt twitch.tv/arteezy
+    
+Full Example (plus `java -jar` call):
+
+    java -jar whatever_you_called_livestreamerFM.jar twitch.tv/arteezy localhost 9999 ~/configs
 
 `STREAM_URL`: The URL of the stream that you want to play.
 

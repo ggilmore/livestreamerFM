@@ -29,7 +29,7 @@ Or:
 
 Example: 
 
-    twitch.tv/arteezy localhost 9999 ~/configs 
+    twitch.tv/arteezy localhost 9999 ~/configs/
 
 Or: 
 
@@ -37,7 +37,7 @@ Or:
     
 Full Example (plus `java -jar` call):
 
-    java -jar whatever_you_called_livestreamerFM.jar twitch.tv/arteezy localhost 9999 ~/configs
+    java -jar whatever_you_called_livestreamerFM.jar twitch.tv/arteezy localhost 9999 ~/configs/
 
 `STREAM_URL`: The URL of the stream that you want to play.
 
@@ -46,7 +46,8 @@ Full Example (plus `java -jar` call):
 `PORT`: The port that you want the http server to bind to.
 
 `LIVESTREAMER_CONFIG_FILE_LOCATION`: This utility generates a config file that the Livestreamer app uses. This part of the
-command tells livestreamerFM what folder to store the generated file in.
+command tells livestreamerFM what folder to store the generated file in. Remember that path should end in a `/` 
+(or a `\` if you are using Windows). 
 
 `LIVESTREAMERFM_CONFIG_FILE_LOCATION`: The location of the LivestreamerFM config file, format described below.
 

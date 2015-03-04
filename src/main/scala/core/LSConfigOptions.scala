@@ -48,7 +48,7 @@ case class LSConfigOptions(name: String = "livestreamerconfig.txt",
    * @return true if candidate is a number between 0 65535 (inclusive), false otherwise 
    */
   private def validPort(candidate: String) = {
-    var valid = false;
+    var valid = false
     try {
       valid = 0 to 65536 contains candidate.toInt
     } catch {

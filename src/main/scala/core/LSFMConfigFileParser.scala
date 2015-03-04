@@ -11,6 +11,7 @@ object LSFMConfigFileParser {
   val VALID_OPTIONS: Map[String, String] = Map("player" -> OperatingSystem.getOS.getDefaultVLCLocation, "delay" -> 
     "5000",
     "ipandport" -> "localhost:9999", "livestreamerconfiglocation" -> {
+      //This code is just to get the path of where livestreamerFM is currently running.
       val path = ArgParser.getClass.getProtectionDomain.getCodeSource.getLocation.getPath
       val fixedPath = path.subSequence(0, path.lastIndexOf(File.separator) + 1)
       fixedPath.toString
@@ -64,7 +65,7 @@ object LSFMConfigFileParser {
   def parseConfigFile(lines: List[String]): Either[Set[GeneralError], LSFMConfigOptions] = {
     val results = lines.filter(x => !x.isEmpty).map(line => parseIndivididualLine(line)).toList
     val (err, userOptions) = split[GeneralError, Option](results)
-    if (!err.isEmpty) Left(err.toSet)
+    if (err.nonEmpty) Left(err.toSet)
     else {
       val usersOptionsMap = userOptions.foldLeft(Map[String, String]()) { (m, x) => m.updated(x.name, x.value)}
       Right(LSFMConfigOptions.buildLSFMConfigOption(usersOptionsMap))

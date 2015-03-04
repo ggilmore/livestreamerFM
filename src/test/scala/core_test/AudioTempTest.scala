@@ -29,7 +29,7 @@ class AudioTempTest extends FlatSpec with Matchers {
 
   }
 
-  it should "not return 'best' for a youtube url that lacks 'www' and the proctcol" in {
+  it should "not return 'best' for a youtube url that lacks 'www' and the protocol" in {
     assert(!(getAudioSettingFromURL("youtube.com/watch?v=wDCIg4AMOq4") == "best"))
 
   }
@@ -50,18 +50,18 @@ class AudioTempTest extends FlatSpec with Matchers {
   }
 
   it should "return 'best' for a url that livestreamer doesn't support" in {
-    assert((getAudioSettingFromURL("https://www.google.com") == "best"))
+    assert(getAudioSettingFromURL("https://www.google.com") == "best")
 
   }
 
   it should "return 'best' for a url that livestreamer doesn't have a pure audio stream for" in {
-    assert((getAudioSettingFromURL("www.ustream.tv/leolaporte") == "best"))
+    assert(getAudioSettingFromURL("www.ustream.tv/leolaporte") == "best")
 
   }
 
   it should "return 'best' for a url that is incorrectly formatted " in {
-    assert((getAudioSettingFromURL("r.e.d.d.i.t") == "best"))
-    assert((getAudioSettingFromURL("omgwtflol") == "best"))
+    assert(getAudioSettingFromURL("r.e.d.d.i.t") == "best")
+    assert(getAudioSettingFromURL("omgwtflol") == "best")
   }
 
 }

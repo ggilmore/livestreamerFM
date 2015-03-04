@@ -1,6 +1,7 @@
 package core
 
 /**
+ *An interface to safely capture and pass around errors 
  * Created by gmgilmore on 3/4/15.
  */
 sealed trait GeneralError {
@@ -39,4 +40,6 @@ case object IPAndPortFormatError extends GeneralError {
     "for more info on how to correctly format the file."
 
 }
+
+
 

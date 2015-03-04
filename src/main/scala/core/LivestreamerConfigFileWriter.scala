@@ -9,7 +9,7 @@ object LivestreamerConfigFileWriter {
    * Creates a new configuration file for Livestreamer
    * @param options = the options to write into the config file
    *
-   * @return either nothing if the configuraiton file was succesfully written, or a LivestreamerConfigFileWriterError
+   * @return either nothing if the configuration file was successfully written, or a LivestreamerConfigFileWriterError
    *         *         if the path given by "options" was invalid
    */
   def writeNewConfigFile(options: LSConfigOptions): Option[LivestreamerConfigFileWriterError] = {

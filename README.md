@@ -35,7 +35,7 @@ Or:
 `PORT`: The port that you want the http server to bind to.
 
 `LIVESTREAMER_CONFIG_FILE_LOCATION`: This utility generates a config file that the Livestreamer app uses. This part of the
-command tells livestreamerFM where to store the generated file. 
+command tells livestreamerFM what folder to store the generated file in.
 
 `LIVESTREAMERFM_CONFIG_FILE_LOCATION`: The location of the LivestreamerFM config file, format described below.
 

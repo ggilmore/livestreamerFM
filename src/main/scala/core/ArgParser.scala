@@ -8,6 +8,9 @@ import core.Util._
 import scala.io.Source
 import scala.sys.process._
 
+/**
+ * * Main class that does the argument parsing, and hands the  
+ */
 object ArgParser extends App {
   /*
    * Desired Arguments: [STREAM_URL] [IP_ADDRESS:PORT] [LIVESTREAMER CONFIG FILE LOCATION]
@@ -16,7 +19,7 @@ object ArgParser extends App {
   private val DEFAULT_USAGE = "USAGE: [STREAM_URL] [IP_ADDRESS:PORT] [LIVESTREAMER_CONFIG_FILE_LOCATION] " +
     "\nOR: --config [LIVESTREAMERFM_CONFIG_FILE_LOCATION] [STREAM_URL]"
 
-  private val CONFIG_INVALID_OPTION = "ERROR: You tried to specifiy an option in the LivestreamerFM configuration " +
+  private val CONFIG_INVALID_OPTION = "ERROR: You tried to specify an option in the LivestreamerFM configuration " +
     "file that " +
     "was invalid. See the README.md for more info on how to correctly format the file."
 
@@ -28,7 +31,7 @@ object ArgParser extends App {
     case Array("--config", configPath, url) => {
       try {
         val lines = Source.fromFile(new File(configPath)).getLines.toList
-        verifyConfigFileArugments(lines, url) match {
+        verifyConfigFileArguments(lines, url) match {
           case Right(options) => createLiveStreamerProcess(options)
           case Left(errors) => errors.foreach(err => println(err.getErrorMessage))
         }
@@ -48,11 +51,12 @@ object ArgParser extends App {
   }
 
   /**
-   * run by arg parser when the first option is --config, reads the config file given in the arguments and then 
-   * * starts the livestreamer process
-   *
+   * * Run by arg parser when the config flag is set. Verifys that
+   * @param configLines the lines from the configuration file passed to the argument parser
+   * @param url the url to pass to livestreamer to grab the stream from
+   * @return A set of general errors
    */
-  private def verifyConfigFileArugments(configLines: List[String], url: String):
+  private def verifyConfigFileArguments(configLines: List[String], url: String):
   Either[Set[GeneralError], LiveStreamerProcessInfo] = {
 
     LSFMConfigFileParser.parseConfigFile(configLines) match {
@@ -63,8 +67,6 @@ object ArgParser extends App {
             val livestreamerOptions = new LSConfigOptions(vlcLocation = myOptions.playerLocation, fileLocation =
               myOptions
                 .livestreamerConfigLocation, delay = myOptions.delay, ip = ip, vlcPort = port)
-            println(s"\n\n****** $url AUDIO STREAM LOCATED @ http:// $ip:$port ******\n\n")
-
             LivestreamerConfigFileWriter.writeNewConfigFile(livestreamerOptions) match {
               case Some(BadConfigPath) => Left(Set(ConfigFileNotFound(livestreamerOptions.fileLocation+ livestreamerOptions.name)))
               case None => Right(LiveStreamerProcessInfo(configLocation = livestreamerOptions.fileLocation + livestreamerOptions.name, 
@@ -112,7 +114,7 @@ object ArgParser extends App {
    * Arg parser runs this when no config file is specified. Starts the livestreamer process with the arguments passed
    * to ArgParser through the command line
    * @param args should be a length 3 string array with the first element being the url that you want to play, the
-   *             second element being the ipAdress and port that you want to use (separated by a colon,
+   *             second element being the ipAddress and port that you want to use (separated by a colon,
    *             ex: 192.168.1.1:9999), and the third element being the location of where you want to store the
    *             configuration file that this program uses to control livestreamer
    */

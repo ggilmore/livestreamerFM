@@ -5,7 +5,10 @@ and [VLC](https://www.videolan.org/vlc/index.html) to create an audio http serve
 livestreamer streams. 
 
 LivestreamerFM is written in scala (and thus requires java to be installed).
-Both VLC and Livestreamer must be installed before using this program.
+
+Both VLC and Livestreamer must be installed before using this program. Installation instructions for livestreamer are 
+found (here)[http://livestreamer.tanuki.se/install.html] and installation instructions for VLC are found 
+(here)[https://www.videolan.org/vlc/index.html#download]
 
 
 ##Command-line usage:

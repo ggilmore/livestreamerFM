@@ -10,7 +10,7 @@ package core
  * @param fileLocation = path to where you want this configuration file to live, must end with '/' character (folder)
  * @param delay = The amount (in milliseconds) of audio that you want VLC to cache before streaming.
  *              Useful for preventing excessive buffering issues
- * @param ip = the ipAdress that you want VLC to bind to. Looks like: [0-255].[0-255].[0-255].[0-255]
+ * @param ip = the ipAddress that you want VLC to bind to. Looks like: [0-255].[0-255].[0-255].[0-255]
  * @param vlcPort = the port that you want VLC to use, between 0 and 65536
  *
  */
@@ -27,25 +27,22 @@ case class LSConfigOptions(name: String = "livestreamerconfig.txt",
    *         separated by periods) or "address" == 'localhost' , false otherwise
    */
   private def validateIPAddress(address: String) = {
+    def validQuad(candidate: String) = {
+      var successful = false
+      try {
+        successful = 0 until 256 contains candidate.toInt
+      } catch {
+        case t: NumberFormatException =>
+      }
+      successful
+
+    }
     (address == "localhost") || (address.split('.').forall { x => validQuad(x)} && address.split('.').length == 4)
   }
 
-
-  private def validQuad(candidate: String) = {
-    var successful = false
-    try {
-      successful = 0 until 256 contains candidate.toInt
-    } catch {
-      case t: NumberFormatException =>
-    }
-    successful
-
-  }
-
   /**
-   * *
    * @param candidate the port to test
-   * @return true if candidate is a number between 0 65535 (inclusive), false otherwise 
+   * @return true if candidate is a number between 0 and 65535 (inclusive), false otherwise
    */
   private def validPort(candidate: String) = {
     var valid = false

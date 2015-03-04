@@ -1,32 +1,23 @@
 package core
 
 import java.io.{FileNotFoundException, File, IOException}
-import java.net.FileNameMap
-
 import core.Util._
-
 import scala.io.Source
 import scala.sys.process._
 
 /**
- * * Main class that does the argument parsing, and hands the  
+ * * Main class that does the argument parsing, and hands those arguments off to helper functions that either start the 
+ * livestreamer process with appropriate options or return error messages to the user.  
  */
 object ArgParser extends App {
   /*
    * Desired Arguments: [STREAM_URL] [IP_ADDRESS:PORT] [LIVESTREAMER CONFIG FILE LOCATION]
+   *                    --config [LIVESTREAMERFM_CONFIG_FILE_LOCATION] [STREAM_URL] 
    */
 
   private val DEFAULT_USAGE = "USAGE: [STREAM_URL] [IP_ADDRESS:PORT] [LIVESTREAMER_CONFIG_FILE_LOCATION] " +
     "\nOR: --config [LIVESTREAMERFM_CONFIG_FILE_LOCATION] [STREAM_URL]"
-
-  private val CONFIG_INVALID_OPTION = "ERROR: You tried to specify an option in the LivestreamerFM configuration " +
-    "file that " +
-    "was invalid. See the README.md for more info on how to correctly format the file."
-
-  private val IP_OR_PORT_ERROR = "That doesn't look like a real IP-Address and/or port. Check it."
-
-  private val LIVESTREAMER_LOCATION_OSX = "/usr/local/bin/livestreamer"
-
+  
   args match {
     case Array("--config", configPath, url) => {
       try {
@@ -51,13 +42,15 @@ object ArgParser extends App {
   }
 
   /**
-   * * Run by arg parser when the config flag is set. Verifys that
+   * * Run by arg parser when the config flag is set. 
    * @param configLines the lines from the configuration file passed to the argument parser
    * @param url the url to pass to livestreamer to grab the stream from
-   * @return A set of general errors
+   * @return A set of CoreError's if there was an error when trying to read from the configuration file, or a 
+   *         LivestreamerProcessInfo that has all the correct configuration options in order to start the livestreamer 
+   *         process.          
    */
   private def verifyConfigFileArguments(configLines: List[String], url: String):
-  Either[Set[GeneralError], LiveStreamerProcessInfo] = {
+  Either[Set[CoreError], LiveStreamerProcessInfo] = {
 
     LSFMConfigFileParser.parseConfigFile(configLines) match {
       case Right(myOptions) => {
@@ -81,22 +74,19 @@ object ArgParser extends App {
 
       }
     }
-  
+
 
   /**
-   * Starts the Livestreamer process with the specified options passed to it
-   * @param livestreamerPath path to the location of the Livestreamer binary
-   * @param configLocation path of the configuration file that is passed to Livestreamer
-   * @param url the url of the stream to listen to (e.g. twitch.tv/arteezy)
-   * @param audioOptionName the specific audio option for the stream that is
-   *                        passed to Livestreamer (e.g. "audio" for a twitch url or "audio_mp4" for youtube urls)
+   * Starts the livestreamer process with all the correct flags set, prints the location of the audio stream. 
+   *  Prints an error message if there was an error when trying to run livestreamer. 
+   *  @param options a LiveStreamerProcessInfo instance that contains all the necessary settings in order to configure 
+   *                 livestreamer. 
    */
   private def createLiveStreamerProcess(options:LiveStreamerProcessInfo) {
 
 
     //    println(livestreamerPath + " --config " + configLocation + " " + url + " " + audioOptionName)
     try {
-
       val lsprocess = Process(s"${options.livestreamerPath} --config ${options.configLocation} ${options.url} ${options.audioOptionName}")
       val runningProcess = lsprocess.run()
       println(s"\n\n****** ${options.url} AUDIO STREAM LOCATED @ http://${options.ip}:${options.port} ******\n\n")
@@ -111,14 +101,13 @@ object ArgParser extends App {
   }
 
   /**
-   * Arg parser runs this when no config file is specified. Starts the livestreamer process with the arguments passed
-   * to ArgParser through the command line
-   * @param args should be a length 3 string array with the first element being the url that you want to play, the
-   *             second element being the ipAddress and port that you want to use (separated by a colon,
-   *             ex: 192.168.1.1:9999), and the third element being the location of where you want to store the
-   *             configuration file that this program uses to control livestreamer
+   * * 
+   * @param url
+   * @param ipAndPort
+   * @param lsConfigLocation
+   * @return
    */
-  private def verifyNoConfigFileArguments(url:String, ipAndPort:String, lsConfigLocation:String):Either[Set[GeneralError], LiveStreamerProcessInfo] = {
+  private def verifyNoConfigFileArguments(url:String, ipAndPort:String, lsConfigLocation:String):Either[Set[CoreError], LiveStreamerProcessInfo] = {
 
     splitIpAndPort(ipAndPort) match {
       case Some((ipAddress, port)) => {

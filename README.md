@@ -2,15 +2,19 @@
 
 Right now, this is just an extremely small command-line utility that uses [Livestreamer](http://livestreamer.tanuki.se/)
 and [VLC](https://www.videolan.org/vlc/index.html) to create an audio http server that streams audio from your favorite 
-livestreamer streams. 
+Livestreamer streams. 
 
-LivestreamerFM is written in scala (and thus requires java to be installed).
+
+##Requirements:
+LivestreamerFM is written in Scala (and thus requires Java to be installed). If you want to build this from source,
+you'll need [Scala](http://www.scala-lang.org/), [SBT](http://www.scala-sbt.org/), and something like 
+[SBT-Assembly](https://github.com/sbt/sbt-assembly) installed.  
 
 Both VLC and Livestreamer must be installed before using this program. Installation instructions for livestreamer are 
 found [here](http://livestreamer.tanuki.se/install.html) and installation instructions for VLC are found
-[here](https://www.videolan.org/vlc/index.html#download).
+[here](https://www.videolan.org/vlc/index.html#download). 
 
-
+Make sure that Livestreamer is in your system path (this should be done automatically when installing livestreamer).
 ##Command-line usage:
 
 Run it from the command-line with these options:
@@ -45,7 +49,7 @@ favorite audio player.
 Example:
 
     ****** twitch.tv/arteezy AUDIO STREAM LOCATED @ http://192.168.1.1:9999 ******
-    
+
 ##LivestreamerFM config file format:
 
 Ex:

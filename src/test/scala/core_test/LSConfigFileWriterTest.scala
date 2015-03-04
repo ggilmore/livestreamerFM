@@ -49,4 +49,9 @@ class LSConfigFileWriterTest extends FlatSpec with Matchers {
     garbageFile.delete
 
   }
+  
+  it should "return an error if the filepath was unable to be accessed for whatever reason" in {
+    
+    
+  }
 }

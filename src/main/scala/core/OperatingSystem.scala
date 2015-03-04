@@ -2,9 +2,9 @@ package core
 
 
 /**
- * Created by gmgilmore on 3/1/15.
+ * Trait for associating configuration options specific to certain operating systems. 
  */
-trait OperatingSystem {
+sealed trait OperatingSystem {
   /**
    *
    * @return the path to the default vlc location for the operating system that this program is running on
@@ -13,6 +13,10 @@ trait OperatingSystem {
 }
 
 object OperatingSystem {
+  /**
+   *
+   * @return the operating system that livestreamerFM is currently running on.
+   */
   def getOS: OperatingSystem = {
     val osName = System.getProperty("os.name")
     osName match {

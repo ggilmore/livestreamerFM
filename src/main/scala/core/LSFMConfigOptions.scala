@@ -5,6 +5,7 @@ package core
  * Created by gmgilmore on 3/2/15.
  */
 
+
 import core.LSFMConfigFileParser.VALID_OPTIONS
 
 object LSFMConfigOptions {

@@ -1,9 +1,11 @@
 package core
 
-import java.io.IOException
+import java.io.{FileNotFoundException, File, IOException}
+import java.net.FileNameMap
 
-import core.LSFMConfigFileParser.{ConfigFileNotFound, InvalidOption, NoOptionValSeparation}
+import core.Util._
 
+import scala.io.Source
 import scala.sys.process._
 
 object ArgParser extends App {
@@ -14,12 +16,6 @@ object ArgParser extends App {
   private val DEFAULT_USAGE = "USAGE: [STREAM_URL] [IP_ADDRESS:PORT] [LIVESTREAMER_CONFIG_FILE_LOCATION] " +
     "\nOR: --config [LIVESTREAMERFM_CONFIG_FILE_LOCATION] [STREAM_URL]"
 
-  private val CONFIG_FORMAT_ERROR = "ERROR: Your LivestreamerFM config file looks incorrectly formatted. You had an " +
-    "[OPTION]" +
-    " [VALUE] pair with no '=' sign to separate the two. \n       See the README.md for more info on how to correctly" +
-    " format " +
-    "the file."
-
   private val CONFIG_INVALID_OPTION = "ERROR: You tried to specifiy an option in the LivestreamerFM configuration " +
     "file that " +
     "was invalid. See the README.md for more info on how to correctly format the file."
@@ -29,8 +25,25 @@ object ArgParser extends App {
   private val LIVESTREAMER_LOCATION_OSX = "/usr/local/bin/livestreamer"
 
   args match {
-    case Array("--config", _, _) => yesConfigFile(args.tail)
-    case Array(_, _, _) => noConfigFile(args)
+    case Array("--config", configPath, url) => {
+      try {
+        val lines = Source.fromFile(new File(configPath)).getLines.toList
+        verifyConfigFileArugments(lines, url) match {
+          case Right(options) => createLiveStreamerProcess(options)
+          case Left(errors) => errors.foreach(err => println(err.getErrorMessage))
+        }
+      }
+      catch {
+        case e: FileNotFoundException => println(s"ERROR: The LivestreamerFM configuration file was not found at $configPath. " +
+          "Make sure it's correct")
+      }
+    }
+    case Array(url, ipAndPort, lsConfigLocation) => {
+      verifyNoConfigFileArguments(url, ipAndPort, lsConfigLocation) match {
+        case Right(options) => createLiveStreamerProcess(options)
+        case Left(errors) => errors.foreach(err => println(err.getErrorMessage))
+      }
+    }
     case _ => println(DEFAULT_USAGE)
   }
 
@@ -38,53 +51,35 @@ object ArgParser extends App {
    * run by arg parser when the first option is --config, reads the config file given in the arguments and then 
    * * starts the livestreamer process
    *
-   *
-   * @param args should be a length 2 string array with the first element being the path to the LivestreamerFM config
-   *             file, and the second element being the url that you want to play 
    */
-  private def yesConfigFile(args: Array[String]) = {
-    val Array(configPath, url) = args
+  private def verifyConfigFileArugments(configLines: List[String], url: String):
+  Either[Set[GeneralError], LiveStreamerProcessInfo] = {
 
-    LSFMConfigFileParser.parseConfigFile(configPath) match {
+    LSFMConfigFileParser.parseConfigFile(configLines) match {
       case Right(myOptions) => {
         //good config
-
         splitIpAndPort(myOptions.ipAndPort) match {
           case Some((ip, port)) => {
             val livestreamerOptions = new LSConfigOptions(vlcLocation = myOptions.playerLocation, fileLocation =
               myOptions
-
                 .livestreamerConfigLocation, delay = myOptions.delay, ip = ip, vlcPort = port)
-
             println(s"\n\n****** $url AUDIO STREAM LOCATED @ http:// $ip:$port ******\n\n")
 
             LivestreamerConfigFileWriter.writeNewConfigFile(livestreamerOptions) match {
-              case Some(BadConfigPath) => println(
-                s"""LivestreamerFM was unable to write to
-                   | ${livestreamerOptions.fileLocation + livestreamerOptions.name}.
-                                                                                     |Is this a real path?"""
-                  .stripMargin)
-              case None => {
-                createLiveStreamerProcess(configLocation = myOptions.livestreamerConfigLocation + livestreamerOptions
-                  .name, url = url, audioOptionName = AudioSettings.getAudioSettingFromURL(url))
-              }
+              case Some(BadConfigPath) => Left(Set(ConfigFileNotFound(livestreamerOptions.fileLocation+ livestreamerOptions.name)))
+              case None => Right(LiveStreamerProcessInfo(configLocation = livestreamerOptions.fileLocation + livestreamerOptions.name, 
+                url = url, ip=livestreamerOptions.ip, port = livestreamerOptions.vlcPort, 
+                audioOptionName = AudioSettings.getAudioSettingFromURL(url)))
             }
           }
-          case None => println(DEFAULT_USAGE)
+          case None => Left(Set(IPAndPortFormatError))
         }
       }
-      case Left(errSet) => {
-        //some error happened when we tried to read the config file
-        errSet.foreach(error => error match {
-          case ConfigFileNotFound => println(s"ERROR: The LivestreamerFM configuration file was not found at $configPath. " + 
-            "Make sure it's correct")
-          case InvalidOption => println(CONFIG_INVALID_OPTION)
-          case NoOptionValSeparation => println(CONFIG_FORMAT_ERROR)
-        })
+      case Left(errSet) => Left(errSet)
 
       }
     }
-  }
+  
 
   /**
    * Starts the Livestreamer process with the specified options passed to it
@@ -94,29 +89,21 @@ object ArgParser extends App {
    * @param audioOptionName the specific audio option for the stream that is
    *                        passed to Livestreamer (e.g. "audio" for a twitch url or "audio_mp4" for youtube urls)
    */
-  private def createLiveStreamerProcess(livestreamerPath: String = "livestreamer",
-                                        configLocation: String, url: String, audioOptionName: String) {
+  private def createLiveStreamerProcess(options:LiveStreamerProcessInfo) {
 
 
     //    println(livestreamerPath + " --config " + configLocation + " " + url + " " + audioOptionName)
     try {
-      val lsprocess = Process(s"$livestreamerPath --config $configLocation $url $audioOptionName")
+
+      val lsprocess = Process(s"${options.livestreamerPath} --config ${options.configLocation} ${options.url} ${options.audioOptionName}")
       val runningProcess = lsprocess.run()
+      println(s"\n\n****** ${options.url} AUDIO STREAM LOCATED @ http://${options.ip}:${options.port} ******\n\n")
       //makes sure to send SIGINT to the livestreamer process so that VLC shuts down cleanly
       sys addShutdownHook ({runningProcess.destroy})
     }
     catch {
       case t: IOException => println("Livestreamer installation not found. Are you sure it's installed and in the " +
         "system path?")
-    }
-
-  }
-
-  private def splitIpAndPort(url: String): Option[(String, String)] = {
-    val splitInput = url.trim.split(":")
-    splitInput match {
-      case Array(ip, port) => Some((ip, port))
-      case _ => None //if there was no colon or if there are too many colons
     }
 
   }
@@ -129,29 +116,28 @@ object ArgParser extends App {
    *             ex: 192.168.1.1:9999), and the third element being the location of where you want to store the
    *             configuration file that this program uses to control livestreamer
    */
-  private def noConfigFile(args: Array[String]) = {
-    val Array(url, ipAndPort, configLocation) = args
+  private def verifyNoConfigFileArguments(url:String, ipAndPort:String, lsConfigLocation:String):Either[Set[GeneralError], LiveStreamerProcessInfo] = {
 
     splitIpAndPort(ipAndPort) match {
       case Some((ipAddress, port)) => {
-        val option = new LSConfigOptions(fileLocation = configLocation, ip = ipAddress, vlcPort = port)
-        if (!option.validateNetworkInfo) println(IP_OR_PORT_ERROR)
+        val option = LSConfigOptions(fileLocation = lsConfigLocation, ip = ipAddress, vlcPort = port)
+        if (!option.validateNetworkInfo) Left(Set(IPAndPortFormatError))
         else {
-          println(s"\n\n****** $url AUDIO STREAM LOCATED @ http://$ipAddress:$port ******\n\n")
-
           LivestreamerConfigFileWriter.writeNewConfigFile(option) match {
-            case Some(BadConfigPath) => println(
-              s"LivestreamerFM was unable to write to ${option.fileLocation + option.name}. Is this a real path?")
-            case None => createLiveStreamerProcess(configLocation = option.fileLocation + option.name, url = url,
-              audioOptionName = AudioSettings.getAudioSettingFromURL(url))
+            case Some(BadConfigPath) => Left(Set(LSConfigWriterPathInvalid(option.fileLocation,option.name)))
+            case None => Right(LiveStreamerProcessInfo(configLocation = option.fileLocation + option.name, url = url, ip = ipAddress, 
+            port= port, audioOptionName = AudioSettings.getAudioSettingFromURL(url)))
           }
         }
       }
-      case None => println(DEFAULT_USAGE)
+      case None => Left(Set(IPAndPortFormatError))
     }
-
-
+    
   }
-
+    
+    private case class LiveStreamerProcessInfo(livestreamerPath:String = "livestreamer",
+    configLocation:String, url:String, ip:String, port:String,audioOptionName:String)
+  
 
 }
+    

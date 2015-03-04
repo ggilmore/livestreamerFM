@@ -1,15 +1,15 @@
 package core
 
-import java.io.{File, FileNotFoundException}
+import java.io.File
 
-import scala.io.Source
 
 /**
  * Created by gmgilmore on 3/2/15.
  */
 object LSFMConfigFileParser {
 
-  val VALID_OPTIONS: Map[String, String] = Map("player" -> OperatingSystem.getOS.getDefaultVLCLocation, "delay" -> "5000",
+  val VALID_OPTIONS: Map[String, String] = Map("player" -> OperatingSystem.getOS.getDefaultVLCLocation, "delay" -> 
+    "5000",
     "ipandport" -> "localhost:9999", "livestreamerconfiglocation" -> {
       val path = ArgParser.getClass.getProtectionDomain.getCodeSource.getLocation.getPath
       val fixedPath = path.subSequence(0, path.lastIndexOf(File.separator) + 1)
@@ -61,29 +61,24 @@ object LSFMConfigFileParser {
    *         above)
    *
    */
-  def parseConfigFile(pathToConfig: String): Either[Set[ConfigFileFormatError], LSFMConfigOptions] = {
-    try {
-      val lines = Source.fromFile(new File(pathToConfig)).getLines.toList
-      val results = lines.filter(x => !x.isEmpty).map(line => parseIndivididualLine(line)).toList
-      val (err, userOptions) = split[ConfigFileFormatError, Option](results)
-      if (!err.isEmpty) Left(err)
-      else {
-        val usersOptionsMap =  userOptions.foldLeft(Map[String, String]()) { (m, x) => m.updated(x.name, x.value)}
-        Right(LSFMConfigOptions.buildLSFMConfigOption(usersOptionsMap))
-      }
-    }
-    catch {
-      case e: FileNotFoundException => Left(Set(ConfigFileNotFound))
+  def parseConfigFile(lines: List[String]): Either[Set[GeneralError], LSFMConfigOptions] = {
+    val results = lines.filter(x => !x.isEmpty).map(line => parseIndivididualLine(line)).toList
+    val (err, userOptions) = split[GeneralError, Option](results)
+    if (!err.isEmpty) Left(err.toSet)
+    else {
+      val usersOptionsMap = userOptions.foldLeft(Map[String, String]()) { (m, x) => m.updated(x.name, x.value)}
+      Right(LSFMConfigOptions.buildLSFMConfigOption(usersOptionsMap))
     }
 
   }
+
 
   /**
    *
    * @param line
    * @return
    */
-  private def parseIndivididualLine(line: String): Either[ConfigFileFormatError, Option] = {
+  private def parseIndivididualLine(line: String): Either[GeneralError, Option] = {
     line.split("=").map(_.trim) match {
       case Array(name, value) => {
         if (VALID_OPTIONS.keySet.contains(name.toLowerCase)) Right(Option(name.toLowerCase, value))
@@ -93,23 +88,15 @@ object LSFMConfigFileParser {
     }
   }
 
-  def split[E, V](results: List[Either[E, V]]): (Set[E], List[V]) = {
-    def loop(setE: Set[E], listV: List[V], rest: List[Either[E, V]]): (Set[E], List[V]) = rest match {
-      case Nil => (setE, listV)
-      case Right(v) :: x => loop(setE, listV :+ v, rest.tail)
-      case Left(e) :: x => loop(setE +e, listV, rest.tail)
+  def split[E, V](results: List[Either[E, V]]): (List[E], List[V]) = {
+    def loop(listE: List[E], listV: List[V], rest: List[Either[E, V]]): (List[E], List[V]) = rest match {
+      case Nil => (listE, listV)
+      case Right(v) :: x => loop(listE, listV :+ v, rest.tail)
+      case Left(e) :: x => loop(listE :+ e, listV, rest.tail)
     }
-    loop(Set(), List(), results)
+    loop(List(), List(), results)
   }
 
-  sealed trait ConfigFileFormatError
-
   private case class Option(name: String, value: String)
-
-  final case object NoOptionValSeparation extends ConfigFileFormatError
-
-  final case object ConfigFileNotFound extends ConfigFileFormatError
-
-  final case object InvalidOption extends ConfigFileFormatError
 
 }

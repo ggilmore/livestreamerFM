@@ -1,4 +1,4 @@
-# livestreamerFM
+# LivestreamerFM
 
 Right now, this is just an extremely small command-line utility that uses [Livestreamer](http://livestreamer.tanuki.se/)
 and [VLC](https://www.videolan.org/vlc/index.html) to create an audio http server that streams audio from your favorite 

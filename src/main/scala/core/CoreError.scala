@@ -26,7 +26,7 @@ case object InvalidOption extends CoreError {
 
 case class ConfigFileNotFound(configPath: String) extends CoreError {
   def getErrorMessage = s"ERROR: The LivestreamerFM configuration file was not found at $configPath. " +
-    "Make sure it's correct"
+    "Make sure it's correct."
 }
 
 case class LSConfigWriterPathInvalid(lsOptionsPath:String, lsOptionsName:String) extends CoreError{

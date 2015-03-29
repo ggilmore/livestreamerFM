@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>LivestreamerFM by ggilmore</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/ggilmore/livestreamerFM">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>LivestreamerFM</h1>
+            <h2>An HTTP audio server for Livestreamer </h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/ggilmore/livestreamerFM/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/ggilmore/livestreamerFM/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a id="livestreamerfm" class="anchor" href="#livestreamerfm" aria-hidden="true"><span class="octicon octicon-link"></span></a>LivestreamerFM</h1>
+
+<p>Right now, this is just an extremely small command-line utility that uses <a href="http://livestreamer.tanuki.se/">Livestreamer</a>
+and <a href="https://www.videolan.org/vlc/index.html">VLC</a> to create an audio http server that streams audio from your favorite 
+Livestreamer streams. </p>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements:</h2>
+
+<p>LivestreamerFM is written in Scala (and thus requires Java to be installed). If you want to build this from source,
+you'll need <a href="http://www.scala-lang.org/">Scala</a>, <a href="http://www.scala-sbt.org/">SBT</a>, and something like 
+<a href="https://github.com/sbt/sbt-assembly">SBT-Assembly</a> installed.  </p>
+
+<p>Both VLC and Livestreamer must be installed before using this program. Installation instructions for Livestreamer are
+found <a href="http://livestreamer.tanuki.se/install.html">here</a> and installation instructions for VLC are found
+<a href="https://www.videolan.org/vlc/index.html#download">here</a>. </p>
+
+<p>Make sure that Livestreamer is in your system path (this should be done automatically when installing livestreamer).</p>
+
+<h2>
+<a id="command-line-usage" class="anchor" href="#command-line-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Command-line usage:</h2>
+
+<p>Run it from the command-line with these options:</p>
+
+<pre><code>[STREAM_URL] [IP_ADDRESS] [PORT] [LIVESTREAMER_CONFIG_FILE_LOCATION]
+</code></pre>
+
+<p>Or: </p>
+
+<pre><code>--config [LIVESTREAMERFM_CONFIG_FILE_LOCATION] [STREAM_URL]
+</code></pre>
+
+<p>Example: </p>
+
+<pre><code>twitch.tv/arteezy localhost 9999 ~/configs/
+</code></pre>
+
+<p>Or: </p>
+
+<pre><code>--config ~/Desktop/LSFMconfig.txt twitch.tv/arteezy
+</code></pre>
+
+<p>Full Example (plus <code>java -jar</code> call):</p>
+
+<pre><code>java -jar whatever_you_called_livestreamerFM.jar twitch.tv/arteezy localhost 9999 ~/configs/
+</code></pre>
+
+<p><code>STREAM_URL</code>: The URL of the stream that you want to play.</p>
+
+<p><code>IP_ADDRESS</code>: The ip address that you want the http server to bind to.</p>
+
+<p><code>PORT</code>: The port that you want the http server to bind to.</p>
+
+<p><code>LIVESTREAMER_CONFIG_FILE_LOCATION</code>: This utility generates a config file that the Livestreamer app uses. This part of the
+command tells livestreamerFM what folder to store the generated file in. Remember that the path should end in a <code>/</code>
+(or a <code>\</code> if you are using Windows).</p>
+
+<p><code>LIVESTREAMERFM_CONFIG_FILE_LOCATION</code>: The location of the LivestreamerFM config file, format described below.</p>
+
+<p>LivestreamerFM will then display the location of the audio stream, so that you can copy and paste it into your 
+favorite audio player. </p>
+
+<p>Example:</p>
+
+<pre><code>****** twitch.tv/arteezy AUDIO STREAM LOCATED @ http://192.168.1.1:9999 ******
+</code></pre>
+
+<h2>
+<a id="livestreamerfm-config-file-format" class="anchor" href="#livestreamerfm-config-file-format" aria-hidden="true"><span class="octicon octicon-link"></span></a>LivestreamerFM config file format:</h2>
+
+<p>Ex:</p>
+
+<pre><code>player = /Applications/VLC.app/Contents/MacOS/VLC
+delay = 5005
+ipAndPort = 192.168.1.1:9999
+livestreamerConfigLocation = /Users/gmgilmore/
+</code></pre>
+
+<p>The file should be a plain text file with each new line having the following format:</p>
+
+<pre><code>[OPTION] = [VALUE]
+</code></pre>
+
+<p>The options that you can choose from are <code>player</code> , <code>delay</code> , <code>ipAndPort</code> , and <code>livestreamerConfigLocation</code>. All these
+options are optional (heh) - you can include any of them, or none of them. They are also case-insensitive.</p>
+
+<p>If you don't follow this format, livestreamerFM will display an error when it tries to read the file. </p>
+
+<h3>
+<a id="option-descriptions" class="anchor" href="#option-descriptions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Option descriptions:</h3>
+
+<p><code>player</code> - The value should be path to the vlc executable on your machine. If this option is not used, LivestreamerFM will
+attempt to guess where VLC is located on your machine. </p>
+
+<p><code>delay</code> - The value should be number of milliseconds that you want LivestreamerFM to cache the audio for. This is used to
+improve performance and mitigate stuttering. If this option is not used, <code>delay</code> will default to 5000 ms.</p>
+
+<p><code>ipAndPort</code> - The value should the IP address that you want the audio server to bind to, followed by the port that you want
+the audio server to use, separated by a colon. If this option is not used, <code>ipAndPort</code> will default to <code>localhost:9999</code>.</p>
+
+<p><code>livestreamerConfigLocation</code> - The value should be the path that you want the livestreamer config file that is generated
+by livestreamerFM to be saved in. If this option is not used, <code>livestreamerConfigLocation</code> will default to the directory
+that livestreamerFM is running in. </p>
+
+<h2>
+<a id="todo" class="anchor" href="#todo" aria-hidden="true"><span class="octicon octicon-link"></span></a>TODO:</h2>
+
+<p>-<del>add config file support so that you don't have to type in all these commands every time</del> Done.</p>
+
+<p>-<del>add support for sites other than twitch.tv and youtube</del> Done-ish. I figured out how to get vlc to only stream the 
+audio from a video, but I haven't tested this with every single site on the supported site list for livestreamer.</p>
+
+<p>-<del>add basic parsing of url so that there is an url -&gt; audio_option matching</del> Done.</p>
+
+<p>-<del>add support for windows and linux (this involves figuring out how to look through the path maybe), will involve some 
+refactoring</del> Done. LivestreamerFM now attempts to guess the path that vlc installed in for windows, linux, and OSX. 
+Users can also use the --config option to specify the vlc path manually using the config file.</p>
+
+<p>-write basic webui</p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/ggilmore">ggilmore</a> can be found on <a href="https://github.com/ggilmore/livestreamerFM">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>

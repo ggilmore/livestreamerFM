@@ -1,0 +1,4 @@
+PlaYer = /Applications/VLC.app/Contents/MacOS/VLC
+DeLay = 5000
+ipAndPORT = localhost:9999
+lIVESTREAMERConfigLocation = /Users/gmgilmore/

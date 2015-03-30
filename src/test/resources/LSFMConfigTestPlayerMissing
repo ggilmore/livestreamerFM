@@ -1,0 +1,4 @@
+
+delay = 5000 
+ipAndPort = localhost:9999
+livestreamerConfigLocation = /Users/gmgilmore/

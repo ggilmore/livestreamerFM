@@ -1,11 +1,11 @@
-[info] Updating {file:/Users/gmgilmore/Dropbox/ScalaDev/livestreamerFMTrue/project/}livestreamerfmtrue-build...
-[debug] :: resolving dependencies :: default#livestreamerfmtrue-build;0.1-SNAPSHOT
+[info] Updating {file:/Users/gmgilmore/Dropbox/ScalaDev/livestreamerFM/project/}livestreamerfm-build...
+[debug] :: resolving dependencies :: default#livestreamerfm-build;0.1-SNAPSHOT
 [debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool]
 [debug] 	validate = true
 [debug] 	refresh = false
 [debug] resolving dependencies for configuration 'compile'
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->default#global-plugins;0.0 [compile->default(compile)]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->default#global-plugins;0.0 [compile->default(compile)]
 [info] Resolving default#global-plugins;0.0 ...
 [debug] sbt-chain: Checking cache for: dependency: default#global-plugins;0.0 {compile=[default(compile)]}
 [debug] 	found default#global-plugins;0.0 in inter-project
@@ -29,47 +29,18 @@
 [debug] == resolving dependencies com.github.mpeltonen#sbt-idea;1.6.0->commons-io#commons-io;2.0.1 [runtime->runtime(*)]
 [debug] == resolving dependencies com.github.mpeltonen#sbt-idea;1.6.0->commons-io#commons-io;2.0.1 [runtime->compile]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->master]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->com.eed3si9n#sbt-assembly;0.13.0 [compile->default(compile)]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->com.eed3si9n#sbt-assembly;0.13.0 [compile->default(compile)]
 [info] Resolving com.eed3si9n#sbt-assembly;0.13.0 ...
 [debug] sbt-chain: Checking cache for: dependency: com.eed3si9n#sbt-assembly;0.13.0 {compile=[default(compile)]}
-[debug] 		tried http://repo.typesafe.com/typesafe/ivy-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.13.0/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.13.0/ivys/ivy.xml
-[debug] 	typesafe-ivy-releases: no ivy file found for com.eed3si9n#sbt-assembly;0.13.0
-[debug] 		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.13.0/ivys/ivy.xml
-[debug] 	sbt-plugin-releases: found md file for com.eed3si9n#sbt-assembly;0.13.0
-[debug] 		=> http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.13.0/ivys/ivy.xml (0.13.0)
-[debug] downloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.13.0/ivys/ivy.xml ...
-[debug] 	sbt-plugin-releases: downloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.13.0/ivys/ivy.xml
-[debug] 	sbt-plugin-releases: downloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.13.0/ivys/ivy.xml.sha1
-[debug] sha1 OK for http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.13.0/ivys/ivy.xml
-[debug] 	[SUCCESSFUL ] com.eed3si9n#sbt-assembly;0.13.0!ivy.xml(ivy.original) (452ms)
-[debug] 	found com.eed3si9n#sbt-assembly;0.13.0 in sbt-plugin-releases
+[debug] sbt-chain: module revision found in cache: com.eed3si9n#sbt-assembly;0.13.0
+[debug] 	typesafe-ivy-releases: revision in cache: com.eed3si9n#sbt-assembly;0.13.0
+[debug] 	found com.eed3si9n#sbt-assembly;0.13.0 in sbt-chain
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->default(compile)]
 [info] Resolving org.scalactic#scalactic_2.10;2.2.1 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scalactic#scalactic_2.10;2.2.1 {compile=[default(compile)]}
-[debug] 		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scalactic/scalactic_2.10/2.2.1/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.scalactic/scalactic_2.10/2.2.1/ivys/ivy.xml
-[debug] 	typesafe-ivy-releases: no ivy file found for org.scalactic#scalactic_2.10;2.2.1
-[debug] 		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalactic/scalactic_2.10/2.2.1/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalactic/scalactic_2.10/2.2.1/ivys/ivy.xml
-[debug] 	sbt-plugin-releases: no ivy file found for org.scalactic#scalactic_2.10;2.2.1
-[debug] 		tried /Users/gmgilmore/.ivy2/local/org.scalactic/scalactic_2.10/2.2.1/ivys/ivy.xml
-[debug] 	local: no ivy file found for org.scalactic#scalactic_2.10;2.2.1
-[debug] 		tried http://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/2.2.1/scalactic_2.10-2.2.1.pom
-[debug] 	public: found md file for org.scalactic#scalactic_2.10;2.2.1
-[debug] 		=> http://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/2.2.1/scalactic_2.10-2.2.1.pom (2.2.1)
-[debug] downloading http://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/2.2.1/scalactic_2.10-2.2.1.pom ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/2.2.1/scalactic_2.10-2.2.1.pom
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/2.2.1/scalactic_2.10-2.2.1.pom.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/2.2.1/scalactic_2.10-2.2.1.pom
-[debug] 	[SUCCESSFUL ] org.scalactic#scalactic_2.10;2.2.1!scalactic_2.10.pom(pom.original) (98ms)
-[debug] 		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scalactic/scalactic_2.10/2.2.1/bundles/scalactic_2.10.jar
-[debug] CLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.scalactic/scalactic_2.10/2.2.1/bundles/scalactic_2.10.jar
-[debug] 		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalactic/scalactic_2.10/2.2.1/bundles/scalactic_2.10.jar
-[debug] CLIENT ERROR: Not Found url=http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalactic/scalactic_2.10/2.2.1/bundles/scalactic_2.10.jar
-[debug] 		tried /Users/gmgilmore/.ivy2/local/org.scalactic/scalactic_2.10/2.2.1/bundles/scalactic_2.10.jar
-[debug] 		tried http://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/2.2.1/scalactic_2.10-2.2.1.jar
-[debug] 	found org.scalactic#scalactic_2.10;2.2.1 in public
+[debug] sbt-chain: module revision found in cache: org.scalactic#scalactic_2.10;2.2.1
+[debug] 	typesafe-ivy-releases: revision in cache: org.scalactic#scalactic_2.10;2.2.1
+[debug] 	found org.scalactic#scalactic_2.10;2.2.1 in sbt-chain
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->runtime]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->compile]
 [debug] == resolving dependencies org.scalactic#scalactic_2.10;2.2.1->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
@@ -102,9 +73,9 @@
 [debug] == resolving dependencies org.scalactic#scalactic_2.10;2.2.1->org.scala-lang#scala-reflect;2.10.4 [runtime->compile]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->master]
 [debug] resolving dependencies for configuration 'runtime'
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->default#global-plugins;0.0 [compile->default(compile)]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->default#global-plugins;0.0 [compile->default(compile)]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->default(compile)]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->runtime]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->compile]
@@ -113,7 +84,7 @@
 [debug] == resolving dependencies com.github.mpeltonen#sbt-idea;1.6.0->commons-io#commons-io;2.0.1 [runtime->runtime(*)]
 [debug] == resolving dependencies com.github.mpeltonen#sbt-idea;1.6.0->commons-io#commons-io;2.0.1 [runtime->compile]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->master]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->com.eed3si9n#sbt-assembly;0.13.0 [compile->default(compile)]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->com.eed3si9n#sbt-assembly;0.13.0 [compile->default(compile)]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->default(compile)]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->runtime]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->compile]
@@ -131,10 +102,10 @@
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.4->org.scala-lang#scala-library;2.10.4 [runtime->compile]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->master]
 [debug] resolving dependencies for configuration 'test'
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [test]
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->default#global-plugins;0.0 [compile->default(compile)]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [test]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->default#global-plugins;0.0 [compile->default(compile)]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->default(compile)]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->runtime]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->compile]
@@ -143,7 +114,7 @@
 [debug] == resolving dependencies com.github.mpeltonen#sbt-idea;1.6.0->commons-io#commons-io;2.0.1 [runtime->runtime(*)]
 [debug] == resolving dependencies com.github.mpeltonen#sbt-idea;1.6.0->commons-io#commons-io;2.0.1 [runtime->compile]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->master]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->com.eed3si9n#sbt-assembly;0.13.0 [compile->default(compile)]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->com.eed3si9n#sbt-assembly;0.13.0 [compile->default(compile)]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->default(compile)]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->runtime]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->compile]
@@ -161,12 +132,12 @@
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.4->org.scala-lang#scala-library;2.10.4 [runtime->compile]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->master]
 [debug] resolving dependencies for configuration 'provided'
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [provided]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->default(compile)]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->runtime]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->compile]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->master]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.5 [provided->default(compile)]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [provided]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->default(compile)]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->runtime]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->compile]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->master]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.5 [provided->default(compile)]
 [info] Resolving org.scala-sbt#sbt;0.13.5 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#sbt;0.13.5 {provided=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#sbt;0.13.5
@@ -702,11 +673,11 @@
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->master]
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-sbt#interface;0.13.5 [compile->default(compile)]
 [debug] resolving dependencies for configuration 'optional'
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [optional]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [optional]
 [debug] resolving dependencies for configuration 'compile-internal'
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [compile-internal]
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->default#global-plugins;0.0 [compile->default(compile)]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [compile-internal]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->default#global-plugins;0.0 [compile->default(compile)]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->default(compile)]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->runtime]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->compile]
@@ -715,7 +686,7 @@
 [debug] == resolving dependencies com.github.mpeltonen#sbt-idea;1.6.0->commons-io#commons-io;2.0.1 [runtime->runtime(*)]
 [debug] == resolving dependencies com.github.mpeltonen#sbt-idea;1.6.0->commons-io#commons-io;2.0.1 [runtime->compile]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->master]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->com.eed3si9n#sbt-assembly;0.13.0 [compile->default(compile)]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->com.eed3si9n#sbt-assembly;0.13.0 [compile->default(compile)]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->default(compile)]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->runtime]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->compile]
@@ -732,13 +703,13 @@
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.4->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.4->org.scala-lang#scala-library;2.10.4 [runtime->compile]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->master]
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [optional]
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [provided]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->default(compile)]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->runtime]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->compile]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->master]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.5 [provided->default(compile)]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [optional]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [provided]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->default(compile)]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->runtime]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->compile]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->master]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.5 [provided->default(compile)]
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)]
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime]
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile]
@@ -1055,10 +1026,10 @@
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->master]
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-sbt#interface;0.13.5 [compile->default(compile)]
 [debug] resolving dependencies for configuration 'runtime-internal'
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [runtime-internal]
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->default#global-plugins;0.0 [compile->default(compile)]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [runtime-internal]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->default#global-plugins;0.0 [compile->default(compile)]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->default(compile)]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->runtime]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->compile]
@@ -1067,7 +1038,7 @@
 [debug] == resolving dependencies com.github.mpeltonen#sbt-idea;1.6.0->commons-io#commons-io;2.0.1 [runtime->runtime(*)]
 [debug] == resolving dependencies com.github.mpeltonen#sbt-idea;1.6.0->commons-io#commons-io;2.0.1 [runtime->compile]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->master]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->com.eed3si9n#sbt-assembly;0.13.0 [compile->default(compile)]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->com.eed3si9n#sbt-assembly;0.13.0 [compile->default(compile)]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->default(compile)]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->runtime]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->compile]
@@ -1084,13 +1055,13 @@
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.4->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.4->org.scala-lang#scala-library;2.10.4 [runtime->compile]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->master]
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [optional]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [optional]
 [debug] resolving dependencies for configuration 'test-internal'
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [test-internal]
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [test]
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->default#global-plugins;0.0 [compile->default(compile)]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [test-internal]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [test]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->default#global-plugins;0.0 [compile->default(compile)]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->default(compile)]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->runtime]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->compile]
@@ -1099,7 +1070,7 @@
 [debug] == resolving dependencies com.github.mpeltonen#sbt-idea;1.6.0->commons-io#commons-io;2.0.1 [runtime->runtime(*)]
 [debug] == resolving dependencies com.github.mpeltonen#sbt-idea;1.6.0->commons-io#commons-io;2.0.1 [runtime->compile]
 [debug] == resolving dependencies default#global-plugins;0.0->com.github.mpeltonen#sbt-idea;1.6.0 [compile->master]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->com.eed3si9n#sbt-assembly;0.13.0 [compile->default(compile)]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->com.eed3si9n#sbt-assembly;0.13.0 [compile->default(compile)]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->default(compile)]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->runtime]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->compile]
@@ -1116,13 +1087,13 @@
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.4->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.4->org.scala-lang#scala-library;2.10.4 [runtime->compile]
 [debug] == resolving dependencies com.eed3si9n#sbt-assembly;0.13.0->org.scalactic#scalactic_2.10;2.2.1 [compile->master]
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [optional]
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [provided]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->default(compile)]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->runtime]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->compile]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->master]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.5 [provided->default(compile)]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [optional]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [provided]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->default(compile)]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->runtime]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->compile]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->master]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.5 [provided->default(compile)]
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)]
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime]
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile]
@@ -1439,18 +1410,18 @@
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->master]
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-sbt#interface;0.13.5 [compile->default(compile)]
 [debug] resolving dependencies for configuration 'plugin'
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [plugin]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [plugin]
 [debug] resolving dependencies for configuration 'sources'
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [sources]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [sources]
 [debug] resolving dependencies for configuration 'docs'
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [docs]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [docs]
 [debug] resolving dependencies for configuration 'pom'
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [pom]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [pom]
 [debug] resolving dependencies for configuration 'scala-tool'
-[debug] == resolving dependencies for default#livestreamerfmtrue-build;0.1-SNAPSHOT [scala-tool]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->default]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->runtime]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->compile]
+[debug] == resolving dependencies for default#livestreamerfm-build;0.1-SNAPSHOT [scala-tool]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->default]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->runtime]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->compile]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#scala-library;2.10.4 [compile->default]
@@ -1468,8 +1439,8 @@
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#scala-reflect;2.10.4 [runtime->compile]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.4->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.4->org.scala-lang#scala-library;2.10.4 [runtime->compile]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->master]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->optional(default)]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->master]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->optional(default)]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#jline;2.10.4 [optional->master(*)]
 [info] Resolving org.scala-lang#jline;2.10.4 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang#jline;2.10.4 {optional=[compile(*), master(*)]}
@@ -1484,27 +1455,17 @@
 [debug] 	typesafe-ivy-releases: revision in cache: org.fusesource.jansi#jansi;1.4
 [debug] 	found org.fusesource.jansi#jansi;1.4 in sbt-chain
 [debug] == resolving dependencies org.scala-lang#jline;2.10.4->org.fusesource.jansi#jansi;1.4 [compile->compile(*)]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->default]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->runtime]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->compile]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->master]
-[debug] == resolving dependencies default#livestreamerfmtrue-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->optional(default)]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->default]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->runtime]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->compile]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->master]
+[debug] == resolving dependencies default#livestreamerfm-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->optional(default)]
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
-[debug] 		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.13.0/jars/sbt-assembly.jar
-[info] downloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.13.0/jars/sbt-assembly.jar ...
-[debug] 	sbt-plugin-releases: downloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.13.0/jars/sbt-assembly.jar
-[debug] 	sbt-plugin-releases: downloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.13.0/jars/sbt-assembly.jar.sha1
-[debug] sha1 OK for http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.13.0/jars/sbt-assembly.jar
-[info] 	[SUCCESSFUL ] com.eed3si9n#sbt-assembly;0.13.0!sbt-assembly.jar (716ms)
+[debug] 	[NOT REQUIRED] com.eed3si9n#sbt-assembly;0.13.0!sbt-assembly.jar
 [debug] 	[NOT REQUIRED] com.github.mpeltonen#sbt-idea;1.6.0!sbt-idea.jar
 [debug] 	[NOT REQUIRED] commons-io#commons-io;2.0.1!commons-io.jar
-[debug] 		tried http://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/2.2.1/scalactic_2.10-2.2.1.jar
-[info] downloading http://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/2.2.1/scalactic_2.10-2.2.1.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/2.2.1/scalactic_2.10-2.2.1.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/2.2.1/scalactic_2.10-2.2.1.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/2.2.1/scalactic_2.10-2.2.1.jar
-[info] 	[SUCCESSFUL ] org.scalactic#scalactic_2.10;2.2.1!scalactic_2.10.jar(bundle) (510ms)
+[debug] 	[NOT REQUIRED] org.scalactic#scalactic_2.10;2.2.1!scalactic_2.10.jar(bundle)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.10.4!scala-library.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.4!scala-reflect.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#sbt;0.13.5!sbt.jar
@@ -1553,19 +1514,19 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 2471ms :: artifacts dl 1258ms
-[debug] 	report for default#livestreamerfmtrue-build;0.1-SNAPSHOT compile produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFMTrue/project/target/resolution-cache/reports/default-livestreamerfmtrue-build-compile.xml
-[debug] 	report for default#livestreamerfmtrue-build;0.1-SNAPSHOT runtime produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFMTrue/project/target/resolution-cache/reports/default-livestreamerfmtrue-build-runtime.xml
-[debug] 	report for default#livestreamerfmtrue-build;0.1-SNAPSHOT test produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFMTrue/project/target/resolution-cache/reports/default-livestreamerfmtrue-build-test.xml
-[debug] 	report for default#livestreamerfmtrue-build;0.1-SNAPSHOT provided produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFMTrue/project/target/resolution-cache/reports/default-livestreamerfmtrue-build-provided.xml
-[debug] 	report for default#livestreamerfmtrue-build;0.1-SNAPSHOT optional produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFMTrue/project/target/resolution-cache/reports/default-livestreamerfmtrue-build-optional.xml
-[debug] 	report for default#livestreamerfmtrue-build;0.1-SNAPSHOT compile-internal produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFMTrue/project/target/resolution-cache/reports/default-livestreamerfmtrue-build-compile-internal.xml
-[debug] 	report for default#livestreamerfmtrue-build;0.1-SNAPSHOT runtime-internal produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFMTrue/project/target/resolution-cache/reports/default-livestreamerfmtrue-build-runtime-internal.xml
-[debug] 	report for default#livestreamerfmtrue-build;0.1-SNAPSHOT test-internal produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFMTrue/project/target/resolution-cache/reports/default-livestreamerfmtrue-build-test-internal.xml
-[debug] 	report for default#livestreamerfmtrue-build;0.1-SNAPSHOT plugin produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFMTrue/project/target/resolution-cache/reports/default-livestreamerfmtrue-build-plugin.xml
-[debug] 	report for default#livestreamerfmtrue-build;0.1-SNAPSHOT sources produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFMTrue/project/target/resolution-cache/reports/default-livestreamerfmtrue-build-sources.xml
-[debug] 	report for default#livestreamerfmtrue-build;0.1-SNAPSHOT docs produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFMTrue/project/target/resolution-cache/reports/default-livestreamerfmtrue-build-docs.xml
-[debug] 	report for default#livestreamerfmtrue-build;0.1-SNAPSHOT pom produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFMTrue/project/target/resolution-cache/reports/default-livestreamerfmtrue-build-pom.xml
-[debug] 	report for default#livestreamerfmtrue-build;0.1-SNAPSHOT scala-tool produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFMTrue/project/target/resolution-cache/reports/default-livestreamerfmtrue-build-scala-tool.xml
-[debug] 	resolve done (2471ms resolve - 1258ms download)
+[debug] :: resolution report :: resolve 558ms :: artifacts dl 30ms
+[debug] 	report for default#livestreamerfm-build;0.1-SNAPSHOT compile produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFM/project/target/resolution-cache/reports/default-livestreamerfm-build-compile.xml
+[debug] 	report for default#livestreamerfm-build;0.1-SNAPSHOT runtime produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFM/project/target/resolution-cache/reports/default-livestreamerfm-build-runtime.xml
+[debug] 	report for default#livestreamerfm-build;0.1-SNAPSHOT test produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFM/project/target/resolution-cache/reports/default-livestreamerfm-build-test.xml
+[debug] 	report for default#livestreamerfm-build;0.1-SNAPSHOT provided produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFM/project/target/resolution-cache/reports/default-livestreamerfm-build-provided.xml
+[debug] 	report for default#livestreamerfm-build;0.1-SNAPSHOT optional produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFM/project/target/resolution-cache/reports/default-livestreamerfm-build-optional.xml
+[debug] 	report for default#livestreamerfm-build;0.1-SNAPSHOT compile-internal produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFM/project/target/resolution-cache/reports/default-livestreamerfm-build-compile-internal.xml
+[debug] 	report for default#livestreamerfm-build;0.1-SNAPSHOT runtime-internal produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFM/project/target/resolution-cache/reports/default-livestreamerfm-build-runtime-internal.xml
+[debug] 	report for default#livestreamerfm-build;0.1-SNAPSHOT test-internal produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFM/project/target/resolution-cache/reports/default-livestreamerfm-build-test-internal.xml
+[debug] 	report for default#livestreamerfm-build;0.1-SNAPSHOT plugin produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFM/project/target/resolution-cache/reports/default-livestreamerfm-build-plugin.xml
+[debug] 	report for default#livestreamerfm-build;0.1-SNAPSHOT sources produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFM/project/target/resolution-cache/reports/default-livestreamerfm-build-sources.xml
+[debug] 	report for default#livestreamerfm-build;0.1-SNAPSHOT docs produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFM/project/target/resolution-cache/reports/default-livestreamerfm-build-docs.xml
+[debug] 	report for default#livestreamerfm-build;0.1-SNAPSHOT pom produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFM/project/target/resolution-cache/reports/default-livestreamerfm-build-pom.xml
+[debug] 	report for default#livestreamerfm-build;0.1-SNAPSHOT scala-tool produced in /Users/gmgilmore/Dropbox/ScalaDev/livestreamerFM/project/target/resolution-cache/reports/default-livestreamerfm-build-scala-tool.xml
+[debug] 	resolve done (558ms resolve - 30ms download)
 [info] Done updating.

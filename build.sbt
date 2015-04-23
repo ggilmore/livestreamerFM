@@ -1,5 +1,7 @@
 name := "livestreamerFMTrue"
 
+organization := "com.github.ggilmore"
+
 version := "1.0"
 
 scalaVersion := "2.11.5"

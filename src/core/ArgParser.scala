@@ -14,6 +14,7 @@ object ArgParser extends App {
   private val DEFAULT_USAGE = "USAGE: [STREAM_URL] [AUDIO_OPTION] [IP_ADDRESS] [PORT] [LIVESTREAMER_CONFIG_FILE_LOCATION]"
   private val IP_OR_PORT_ERROR = "That doesn't look like a real IP-Address and/or port. Check it."
   private val LIVESTREAMER_LOCATION_OSX = "/usr/local/bin/livestreamer"
+  val osName = System.getProperty("os.name")
 
   if (args.size != 5) println(DEFAULT_USAGE)
   else {
@@ -22,8 +23,9 @@ object ArgParser extends App {
     val ipAddress = args(2)
     val port = args(3)
     val configLocation = args(4)
+    println(osName)
     val option = new LSConfigOptions(fileLocation = configLocation, ip = ipAddress, vlcPort = port)
-    if (!option.validate) println(IP_OR_PORT_ERROR)
+    if (!option.validateNetworkInfo) println(IP_OR_PORT_ERROR)
     else {
       println("\n\n****** " + url + " AUDIO STREAM LOCATED @ http://" + ipAddress + ":" + port + " ******\n\n")
       LivestreamerConfigFileWriter.writeNewConfigFile(option)

@@ -49,7 +49,7 @@ object ArgParser extends App {
    *         LivestreamerProcessInfo that has all the correct configuration options in order to start the livestreamer 
    *         process.          
    */
-  private def verifyConfigFileArguments(configLines: List[String], url: String):
+  def verifyConfigFileArguments(configLines: List[String], url: String):
   Either[Set[CoreError], LiveStreamerProcessInfo] = {
 
     LSFMConfigFileParser.parseConfigFile(configLines) match {
@@ -82,7 +82,7 @@ object ArgParser extends App {
    *  @param options a LiveStreamerProcessInfo instance that contains all the necessary settings in order to configure 
    *                 livestreamer. 
    */
-  private def createLiveStreamerProcess(options:LiveStreamerProcessInfo) {
+  def createLiveStreamerProcess(options:LiveStreamerProcessInfo) {
 
 
     //    println(livestreamerPath + " --config " + configLocation + " " + url + " " + audioOptionName)
@@ -110,7 +110,7 @@ object ArgParser extends App {
    * @return a Set of CoreError's if there was an issue when parsing ipAndPort or writing the configuration file, or  a 
    *          LiveStreamerProcessInfo that contains all the necessary infromation in order to run the livestreamer process. 
    */
-  private def verifyNoConfigFileArguments(url:String, ipAndPort:String, lsConfigLocation:String):Either[Set[CoreError], LiveStreamerProcessInfo] = {
+   def verifyNoConfigFileArguments(url:String, ipAndPort:String, lsConfigLocation:String):Either[Set[CoreError], LiveStreamerProcessInfo] = {
 
     splitIpAndPort(ipAndPort) match {
       case Some((ipAddress, port)) => {
@@ -140,7 +140,7 @@ object ArgParser extends App {
    * @param audioOptionName the stream option passed to livestreamer, determined by the particular livestreamer plugin 
    *                        that we are using.
    */
-    private case class LiveStreamerProcessInfo(livestreamerPath:String = "livestreamer",
+  case class LiveStreamerProcessInfo(livestreamerPath:String = "livestreamer",
     configLocation:String, url:String, ip:String, port:String,audioOptionName:String)
   
 
